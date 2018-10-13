@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "605519395456",
+    "firebase_url": "https://ilo-gobiz.firebaseio.com",
+    "project_id": "ilo-gobiz",
+    "storage_bucket": "ilo-gobiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605519395456:android:f5d044070c970096",
+        "android_client_info": {
+          "package_name": "com.example.vaibh.gobiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605519395456-mdl5ahjl5nci5s8lda2k8hmfkhc7tbka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbf557h1B9zYQLCW0kPnntOEg9fVPjJiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
