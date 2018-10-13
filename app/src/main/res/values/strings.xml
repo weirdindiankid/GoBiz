@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">goBiz</string>
+    <string name ="hint_name"></string>
+    <string name ="hint_email"></string>
+    <string name ="hint_pass"></string>
+    <string name ="hint_confirm_pass"></string>
+
 </resources>
