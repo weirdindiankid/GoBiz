@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">goBiz</string>
+
+    <string name ="hint_name">Name</string>
+    <string name ="hint_email">Email</string>
+    <string name ="hint_pass">Password</string>
+    <string name ="hint_confirm_pass">Confirm Password</string>
     <string name="sign_in_with">Sign in with</string>
     <string name="facebook_login_image_button">Facebook Login - Image Button</string>
     <string name="email_id">Email Id</string>
     <string name="password">Password</string>
     <string name="forgot_your_details">Forgot your details?</string>
-    <string name="new_user_sign_up_here">New User? Sign Up Here</string>
     <string name="sign_in">Sign In</string>
+    <string name="txt_sign_up">Enter Your Details</string>
 </resources>
