@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Dashboard"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <TextView
+        android:id="@+id/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/dashboard_title"
+        android:textSize="42sp"
+        app:layout_constraintStart_toStartOf="@+id/courses_image"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Left column-->
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/course_label"
+        app:layout_constraintStart_toStartOf="@+id/courses_image"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_label"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/courses_image"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoCourses"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toStartOf="@+id/circleImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/network_label"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/courses_image"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoBadges"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/courses_image"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/settings_label"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView5"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView4"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView4"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoNetwork"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toStartOf="@+id/circleImageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/badges_label"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_label"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoProfile"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/profile_label"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView5"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoSettings"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toStartOf="@+id/circleImageView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/dashboard_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/about_label"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView3"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView2"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView3"
+        style="@style/dashboard_image"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoAbout"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"/>
+
+
+    <!--<Button-->
+    <!--android:id="@+id/button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="1dp"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:onClick="gotoCourses"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/button2"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView2"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="7dp"-->
+    <!--android:text="@string/badges_label"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/button2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button2"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="38dp"-->
+    <!--android:onClick="gotoBadges"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/textView5"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/button"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="112dp"-->
+    <!--android:layout_marginBottom="112dp"-->
+    <!--android:text="@string/network_label"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/textView6"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button3"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/textView2"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="1dp"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:onClick="gotoNetwork"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/button4"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView4"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView5"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="7dp"-->
+    <!--android:text="@string/profile_label"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/button4"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button4"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button4"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="38dp"-->
+    <!--android:onClick="gotoProfile"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/textView7"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/button3"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView6"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="140dp"-->
+    <!--android:text="@string/settings_label"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button5"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button5"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="1dp"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--android:onClick="gotoSettings"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/button6"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView7"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="7dp"-->
+    <!--android:text="@string/about"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/button6"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button6"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button6"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:onClick="gotoAbout"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/button5"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/button5"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/button5"-->
+    <!--/>-->
+
+</android.support.constraint.ConstraintLayout>

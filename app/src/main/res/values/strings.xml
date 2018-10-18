@@ -12,4 +12,12 @@
     <string name="forgot_your_details">Forgot your details?</string>
     <string name="sign_in">Sign In</string>
     <string name="txt_sign_up">Enter Your Details</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="course_label">Courses</string>
+    <string name="badges_label">Badges</string>
+    <string name="network_label">Network</string>
+    <string name="profile_label">Profile</string>
+    <string name="settings_label">Settings</string>
+    <string name="about_label">About</string>
+    <string name="goto_dashboard">Goto Dashboard</string>
 </resources>
