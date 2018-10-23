@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -18,6 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginScreen extends AppCompatActivity {
     private Button btnSignUp;
     private Button btnSignIn;
+    private TextView txtForgotPass;
     private EditText edtEmail, edtPassword;
     private String strEmail, strPass;
     private FirebaseAuth mAuth;
@@ -31,6 +34,8 @@ public class LoginScreen extends AppCompatActivity {
 
         edtEmail = findViewById(R.id.edtEmailSignIn);
         edtPassword = findViewById(R.id.edtPasswordSignIn);
+
+        txtForgotPass = findViewById(R.id.txtForgotDetails);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -50,6 +55,13 @@ public class LoginScreen extends AppCompatActivity {
                     VerifyIDPass();
             }
         });
+
+
+    }
+
+    public void ResetPassword(View v){
+        Intent i = new Intent(getApplicationContext(), PasswordReset.class);
+        startActivity(i);
     }
 
     public void VerifyIDPass(){
@@ -72,7 +84,7 @@ public class LoginScreen extends AppCompatActivity {
                 }
             }
         });
-        
+
     }
 
 //    @Override

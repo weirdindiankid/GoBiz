@@ -20,4 +20,5 @@
     <string name="settings_label">Settings</string>
     <string name="about_label">About</string>
     <string name="goto_dashboard">Goto Dashboard</string>
+    <string name="send_reset_link">Send Reset Link</string>
 </resources>
