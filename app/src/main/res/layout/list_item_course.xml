@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/donutProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:donut_circle_starting_degree="271"
+        custom:donut_progress="25.3"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="8"
+        >
+
+        <TextView
+            android:id="@+id/courseName"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            tools:text="Course 1: Introduction"/>
+
+        <TextView
+            android:id="@+id/courseDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:foregroundGravity="center_vertical"
+            android:textSize="12sp"
+            tools:text="Aenean ultricies ante vel cursus condimentum. Donec nec magna tincidunt, rutrum ligula a, fermentum nibh. Donec elementum mauris nec felis cursus pharetra."/>
+    </LinearLayout>
+
+
+</LinearLayout>

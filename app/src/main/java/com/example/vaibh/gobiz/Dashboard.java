@@ -14,7 +14,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     public void gotoCourses(View view) {
-        Intent i = new Intent(getApplicationContext(), Courses.class);
+        Intent i = new Intent(getApplicationContext(), CoursesActivity.class);
         startActivity(i);
     }
 
