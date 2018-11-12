@@ -35,10 +35,10 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         TextView nameView = convertView.findViewById(R.id.courseName);
         TextView descriptionView = convertView.findViewById(R.id.courseDescription);
 
-        donutProgress.setDonut_progress(Integer.toString(course.getPercentComplete()));
-        donutProgress.setText(Integer.toString(course.getPercentComplete()) + "%");
-        nameView.setText(getContext().getString(R.string.course_item_title, Integer.toString(position + 1), course.getName()));
-        descriptionView.setText(course.getDescription());
+//        donutProgress.setDonut_progress(Integer.toString(course.getPercentComplete()));
+//        donutProgress.setText(Integer.toString(course.getPercentComplete()) + "%");
+//        nameView.setText(getContext().getString(R.string.course_item_title, Integer.toString(position + 1), course.getName()));
+//        descriptionView.setText(course.getDescription());
 
         return convertView;
     }

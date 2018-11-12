@@ -17,14 +17,28 @@ public class User {
      objectId = user.getUid();
  }
 
+
+    /**
+     *
+     * @return objectId
+     */
  public String getObjectId(){
      return this.objectId;
  }
+
+    /**
+     *
+     * @return name
+     */
 
  public String getName(){
      return name;
  }
 
+    /**
+     *
+     * @return email
+     */
  public String getEmail(){
      return this.email;
  }

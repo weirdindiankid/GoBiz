@@ -1,48 +1,42 @@
 package com.example.vaibh.gobiz.pojos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
 
-    private String name;
-    private String description;
-    private boolean isUnlocked;
-    private int completionPercentage;
+    String courseName ;
+    List<String> courseModules =  new ArrayList<String>();
 
-    public Course(String name, String description, boolean isUnlocked, int percentComplete) {
-        this.name = name;
-        this.description = description;
-        this.isUnlocked = isUnlocked;
-        this.completionPercentage = percentComplete;
+
+    /**
+     *
+     * @param name
+     * @param modules
+     */
+
+    public Course(String name, List<String> modules){
+
+        courseName = name;
+        courseModules = modules;
+
+
     }
 
-    public String getName() {
-        return name;
+    /**
+     *
+     * @return courseModules
+     */
+    public List<String> getCourseModules() {
+        return courseModules;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     *
+     * @return courseName
+     */
+    public String getCourseName() {
+        return courseName;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public boolean isUnlocked() {
-        return isUnlocked;
-    }
-
-    public void setUnlocked(boolean unlocked) {
-        isUnlocked = unlocked;
-    }
-
-    public int getPercentComplete() {
-        return completionPercentage;
-    }
-
-    public void setPercentComplete(int completionPercentage) {
-        this.completionPercentage = completionPercentage;
-    }
 }
