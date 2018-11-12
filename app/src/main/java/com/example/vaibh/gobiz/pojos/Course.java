@@ -7,7 +7,7 @@ public class Course {
 
     String courseName ;
     List<String> courseModules =  new ArrayList<String>();
-
+    String courseDescription ;
 
     /**
      *
@@ -19,6 +19,7 @@ public class Course {
 
         courseName = name;
         courseModules = modules;
+        courseDescription = "Description to be added later as we get more data";
 
 
     }
@@ -39,4 +40,11 @@ public class Course {
         return courseName;
     }
 
+    /**
+     *
+     * @return courseDescription
+     */
+    public String getCourseDescription() {
+        return courseDescription;
+    }
 }

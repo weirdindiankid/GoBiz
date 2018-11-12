@@ -1,6 +1,7 @@
 package com.example.vaibh.gobiz.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,10 +36,11 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         TextView nameView = convertView.findViewById(R.id.courseName);
         TextView descriptionView = convertView.findViewById(R.id.courseDescription);
 
-//        donutProgress.setDonut_progress(Integer.toString(course.getPercentComplete()));
-//        donutProgress.setText(Integer.toString(course.getPercentComplete()) + "%");
-//        nameView.setText(getContext().getString(R.string.course_item_title, Integer.toString(position + 1), course.getName()));
-//        descriptionView.setText(course.getDescription());
+        donutProgress.setDonut_progress(Integer.toString(75));
+        donutProgress.setText(Integer.toString(75) + "%");
+        nameView.setText(course.getCourseName());
+        descriptionView.setText(course.getCourseDescription());
+        Log.d("Adapter title", course.getCourseName());
 
         return convertView;
     }
