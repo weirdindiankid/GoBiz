@@ -22,4 +22,11 @@
     <string name="goto_dashboard">Goto Dashboard</string>
     <string name="send_reset_link">Send Reset Link</string>
     <string name="course_item_title">Course %1$s: %2$s</string>
+    <string name="lesson_1_story_1_text">Zara and Anwar have both been thinking about starting a new business. Zara is considering three different options: opening a tailoring shop, a clothing shop, or a jewelry shop. Anwar has also identified three different ideas: opening a restaurant, a bakery, or a coffee shop. They discuss their ideas together.</string>
+    <string name="lesson_1_story_1_title">Story of Zara and Anwar</string>
+    <string name="story">Story</string>
+    <string name="lesson_1">Lesson 1</string>
+    <string name="skip">Skip</string>
+    <string name="lesson_1_dialogue_1">\"I THINK THAT IT WILL BE COMPLICATED AND EXPENSIVE TO FIND ALL THE TOOLS AND MATERIALS TO MAKE JEWELRY. WHAT DO YOU THINK, ANWAR?\"</string>
+    <string name="lesson_1_dialogue_2">\"I THINK THAT PEOPLE NEED CLOTHES MORE THAN JEWELRY.\"</string>
 </resources>

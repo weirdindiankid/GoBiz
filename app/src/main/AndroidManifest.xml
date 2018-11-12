@@ -23,12 +23,18 @@
         <activity android:name=".WelcomeActivity"/>
         <activity android:name=".Dashboard"/>
         <activity android:name=".PasswordReset"/>
-        <activity android:name=".CoursesActivity"/>
+        <activity android:name=".CoursesActivity">
+
+        </activity>
+
         <activity android:name=".Badges"/>
         <activity android:name=".Network"/>
         <activity android:name=".Profile"/>
         <activity android:name=".Settings"/>
         <activity android:name=".About"/>
+        <activity android:name=".LessonActivity">
+
+        </activity>
     </application>
 
 </manifest>
