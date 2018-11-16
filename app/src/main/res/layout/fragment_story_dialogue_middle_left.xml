@@ -23,49 +23,51 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="90"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        app:layout_constraintBottom_toBottomOf="@+id/dialogue"
+        app:layout_constraintTop_toBottomOf="@+id/dialogue">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="148dp"
+            android:layout_height="197dp"
             android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
             android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/dialogue_4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="227dp"
-            android:layout_height="91dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="8dp"
-            android:background="#faf"
+            android:id="@+id/dialogue"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="173dp"
+            android:background="@drawable/black_border"
             android:fontFamily="@font/sign_painter_house_slant"
             android:gravity="center_vertical"
             android:lineSpacingMultiplier="1.2"
-            android:padding="10dp"
-            android:text="@string/lesson_1_dialogue_1"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="10dp"
             android:textColor="#000"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            android:textSize="@dimen/dialogue_text_size"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            tools:text="@string/lesson_1_dialogue_4"/>
 
     </android.support.constraint.ConstraintLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/next_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/next_button_dimen"
+        android:layout_height="@dimen/next_button_dimen"
         android:layout_gravity="end"
         android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
         android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/next"/>
 
 
 </LinearLayout>

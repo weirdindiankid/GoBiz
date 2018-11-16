@@ -19,11 +19,12 @@
         />
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="12.5"
+        android:layout_weight="13.5"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/story_intro"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -50,24 +51,24 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"/>
 
-    <TextView
-        android:id="@+id/skip_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:text="@string/skip"
-        android:textColor="#000"
-        android:textSize="12sp"
-        android:textStyle="italic"
-        />
+    <!--<TextView-->
+        <!--android:id="@+id/skip_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:text="@string/skip"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="12sp"-->
+        <!--android:textStyle="italic"-->
+        <!--/>-->
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/next_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/next_button_dimen"
+        android:layout_height="@dimen/next_button_dimen"
         android:layout_gravity="end"
-        android:src="@drawable/ic_launcher_background"/>
+        android:src="@drawable/next"/>
 
 </LinearLayout>

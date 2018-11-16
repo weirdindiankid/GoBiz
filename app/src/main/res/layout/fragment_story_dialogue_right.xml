@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    >
+
+    <include
+        layout="@layout/lesson_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginTop="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginBottom="48dp"
+        android:layout_weight="10"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogue"
+        app:layout_constraintTop_toBottomOf="@+id/dialogue">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
+            android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dialogue_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialogue"
+            android:layout_width="250dp"
+            android:layout_height="101dp"
+            android:layout_marginTop="178dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/black_border"
+            android:fontFamily="@font/sign_painter_house_slant"
+            android:gravity="center_vertical"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="10dp"
+            android:text="@string/lesson_1_dialogue_1"
+            android:textColor="#000"
+            android:textSize="@dimen/dialogue_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/next_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+        android:src="@drawable/next"/>
+
+
+</LinearLayout>
