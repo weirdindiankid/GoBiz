@@ -22,8 +22,8 @@
     <string name="goto_dashboard">Goto Dashboard</string>
     <string name="send_reset_link">Send Reset Link</string>
     <string name="course_item_title">Course %1$s: %2$s</string>
-    <string name="lesson_1_story_1_text">Zara and Anwar have both been thinking about starting a new business. Zara is considering three different options: opening a tailoring shop, a clothing shop, or a jewelry shop. Anwar has also identified three different ideas: opening a restaurant, a bakery, or a coffee shop. They discuss their ideas together.</string>
-    <string name="lesson_1_story_1_title">Story of Zara and Anwar</string>
+    <string name="lesson_1_story_intro">Zara and Anwar have both been thinking about starting a new business. Zara is considering three different options: opening a tailoring shop, a clothing shop, or a jewelry shop. Anwar has also identified three different ideas: opening a restaurant, a bakery, or a coffee shop. They discuss their ideas together.</string>
+    <string name="lesson_1_story_intro_caption">Story of Zara and Anwar</string>
     <string name="story">Story</string>
     <string name="lesson_1">Lesson 1</string>
     <string name="skip">Skip</string>
@@ -32,4 +32,8 @@
     <string name="lesson_1_dialogue_3">\"You are right. It is probably better to open a clothing shop.\"</string>
     <string name="lesson_1_dialogue_4">\"I am experienced in banking, but I don\'t feel skilled enough to open a restaurant.\"</string>
     <string name="lesson_1_dialogue_5">\"Everyone needs to buy bread every day. Why not open a bakery?\"</string>
+    <string name="lesson_1_story_question_1">What are Zara and Anwar trying to decide?</string>
+    <string name="lesson_1_story_question_2">What factors are they considering when deciding on a business idea?</string>
+    <string name="lesson_1_story_question_3">What business idea do you think Zara and Anwar should each choose?</string>
+    <string name="consider_the_following_questions_before_moving_on_slide_to_reveal">Consider the following questions before moving on. Slide to reveal:</string>
 </resources>

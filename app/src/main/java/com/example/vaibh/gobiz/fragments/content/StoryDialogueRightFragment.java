@@ -16,8 +16,7 @@ public class StoryDialogueRightFragment extends StoryDialogueFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_story_dialogue_right, container, false);
-        this.setupNextButton(view);
-        this.setupDialogue(view);
+        setupFragment(view);
         return view;
     }
 }

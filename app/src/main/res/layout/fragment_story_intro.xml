@@ -27,11 +27,12 @@
         android:src="@drawable/story_intro"/>
 
     <TextView
+        android:id="@+id/caption"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         android:layout_weight="8"
-        android:text="@string/lesson_1_story_1_title"
+        android:text="@string/lesson_1_story_intro_caption"
         android:textColor="#000"
         android:textStyle="bold"
         app:autoSizeMaxTextSize="100sp"
@@ -40,11 +41,12 @@
         app:autoSizeTextType="uniform"/>
 
     <TextView
+        android:id="@+id/story_intro"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
         android:layout_weight="10"
-        android:text="@string/lesson_1_story_1_text"
+        android:text="@string/lesson_1_story_intro"
         android:textColor="#000"
         app:autoSizeMaxTextSize="100sp"
         app:autoSizeMinTextSize="12sp"

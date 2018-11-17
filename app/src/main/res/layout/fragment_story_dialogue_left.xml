@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dialogue">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/dialogue_image"
             android:layout_width="match_parent"
             android:layout_height="204dp"
             android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
@@ -41,7 +41,7 @@
         <TextView
             android:id="@+id/dialogue"
             android:layout_width="221dp"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="180dp"
             android:background="@drawable/black_border"

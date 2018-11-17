@@ -8,7 +8,7 @@ import com.example.vaibh.gobiz.R;
 
 import java.util.Objects;
 
-public class LessonFragment extends Fragment {
+public class NextButtonFragment extends Fragment {
 
     protected void setupNextButton(View view) {
         View nextButton = view.findViewById(R.id.next_button);

@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.vaibh.gobiz.R;
 
-public class LessonIntroFragment extends LessonFragment {
+public class LessonSplashIntroFragment extends NextButtonFragment {
 
     @Nullable
     @Override

@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dialogue">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/dialogue_image"
             android:layout_width="match_parent"
             android:layout_height="197dp"
             android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
@@ -41,7 +41,7 @@
         <TextView
             android:id="@+id/dialogue"
             android:layout_width="240dp"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:background="@drawable/black_border"
             android:fontFamily="@font/sign_painter_house_slant"
@@ -54,9 +54,9 @@
             android:text="@string/lesson_1_dialogue_3"
             android:textColor="#000"
             android:textSize="@dimen/dialogue_text_size"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/dialogue_image"
+            app:layout_constraintStart_toStartOf="@+id/dialogue_image"
+            app:layout_constraintTop_toBottomOf="@+id/dialogue_image"
             />
 
     </android.support.constraint.ConstraintLayout>
