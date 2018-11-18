@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
 import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
+import com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseContinuedFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseFragment;
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
@@ -53,38 +54,38 @@ public class LessonActivity extends AppCompatActivity {
         f2.setStoryIntroString(getString(R.string.lesson_1_story_intro));
 
         StoryDialogueFragment f3 = new StoryDialogueRightFragment();
-        f3.setDialogueString(R.string.lesson_1_dialogue_1, getResources());
+        f3.setDialogueString(getString(R.string.lesson_1_dialogue_1));
         f3.setDialogueImageResource(R.drawable.dialogue_1);
 
 
-        StoryDialogueLeftFragment f4 =  new StoryDialogueLeftFragment();
-        f4.setDialogueString(R.string.lesson_1_dialogue_2, getResources());
+        StoryDialogueLeftFragment f4 = new StoryDialogueLeftFragment();
+        f4.setDialogueString(getString(R.string.lesson_1_dialogue_2));
         f4.setDialogueImageResource(R.drawable.dialogue_2);
 
 
         StoryDialogueFragment f5 = new StoryDialogueCenterFragment();
-        f5.setDialogueString(R.string.lesson_1_dialogue_3, getResources());
+        f5.setDialogueString(getString(R.string.lesson_1_dialogue_3));
         f5.setDialogueImageResource(R.drawable.dialogue_3);
 
 
-        StoryDialogueFragment f6 =  new StoryDialogueMiddleLeft();
-        f6.setDialogueString(R.string.lesson_1_dialogue_4, getResources());
+        StoryDialogueFragment f6 = new StoryDialogueMiddleLeft();
+        f6.setDialogueString(getString(R.string.lesson_1_dialogue_4));
         f6.setDialogueImageResource(R.drawable.dialogue_4);
 
 
         StoryDialogueFragment f7 = new StoryDialogueCenterFragment();
-        f7.setDialogueString(R.string.lesson_1_dialogue_5, getResources());
+        f7.setDialogueString(getString(R.string.lesson_1_dialogue_5));
         f7.setDialogueImageResource(R.drawable.dialogue_5);
 
         StoryQuestionsFragment f8 = new StoryQuestionsFragment();
         f8.setQuestionStrings(
-                getResources().getString(R.string.lesson_1_story_question_1),
-                getResources().getString(R.string.lesson_1_story_question_2),
-                getResources().getString(R.string.lesson_1_story_question_3)
+                getString(R.string.lesson_1_story_question_1),
+                getString(R.string.lesson_1_story_question_2),
+                getString(R.string.lesson_1_story_question_3)
         );
 
         TheoryModelFragment f9 = new TheoryModelFragment();
-        f9.setTheoryModelText(getResources().getString(R.string.lesson_1_theory_model));
+        f9.setTheoryModelText(getString(R.string.lesson_1_theory_model));
 
         ExamplesFragment f10 = new ExamplesFragment();
         f10.setCaptionString(getString(R.string.lesson_1_examples_caption));
@@ -104,13 +105,19 @@ public class LessonActivity extends AppCompatActivity {
         ExerciseContinuedFragment f12 = new ExerciseContinuedFragment();
         f12.setExerciseString(getString(R.string.lesson_1_exercise_part_2));
 
-        for (NextButtonFragment f: Arrays.asList(f12, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
+        ExerciseBringingItBackFragment f13 = new ExerciseBringingItBackFragment();
+        f13.setInstructionsString(getString(R.string.lesson_1_bringing_it_back_instructions));
+        f13.setPromptString(getString(R.string.lesson_1_bringing_it_back_prompt));
+        f13.setQuestion1String(getString(R.string.lesson_1_bringing_it_back_question_1));
+        f13.setQuestion2String(getString(R.string.lesson_1_bringing_it_back_question_2));
+
+        for (NextButtonFragment f : Arrays.asList(f12, f13, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
             if (f instanceof HeaderAndSubheaderFragment) {
-                ((HeaderAndSubheaderFragment)f).setLessonNumber(lessonNumber);
+                ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
             lessonContentPagerAdapter.addFragment(f);
         }
-        
+
         viewPager.setAdapter(lessonContentPagerAdapter);
     }
 

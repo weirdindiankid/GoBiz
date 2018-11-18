@@ -59,4 +59,10 @@
     <string name="lesson">Lesson</string>
     <string name="continued">(continued)</string>
     <string name="lesson_1_exercise_part_2">Then, on the other side of the paper, try coming up with solutions to these unmet needs, innovative things that could be done to address them.</string>
+    <string name="bringing_it_back">Bringing it Back</string>
+    <string name="lesson_1_bringing_it_back_instructions">Think back to the four points raised earlier - What people need but don\'t have. Resources that you have and could use. Your own strengths and interests. A problem you can solve.</string>
+    <string name="lesson_1_bringing_it_back_prompt">Which unmet need / solution do you think fits you and your opportunities best? Type that business idea below, along with the customer needs that it meets. Your answers will be saved.</string>
+    <string name="lesson_1_bringing_it_back_question_1">Potential Customers\' Unmet Needs:</string>
+    <string name="lesson_1_bringing_it_back_question_2">Business Idea / Solution to Meet this Need:</string>
+    <string name="edit_text_hint">|</string>
 </resources>

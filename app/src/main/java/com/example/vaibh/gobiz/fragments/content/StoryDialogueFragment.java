@@ -1,6 +1,5 @@
 package com.example.vaibh.gobiz.fragments.content;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,10 +20,6 @@ public class StoryDialogueFragment extends HeaderAndSubheaderFragment {
 
         args.putString(StoryDialogueLeftFragment.DIALOGUE_STRING, text);
         this.setArguments(args);
-    }
-
-    public void setDialogueString(int strResource, Resources resources) {
-        setDialogueString(resources.getString(strResource));
     }
 
     public void setDialogueImageResource(int imageResource) {
