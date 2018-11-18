@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
+import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.NextButtonFragment;
@@ -14,10 +15,12 @@ import com.example.vaibh.gobiz.fragments.content.StoryDialogueFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueLeftFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueMiddleLeft;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueRightFragment;
-import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
+import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.TheoryModelFragment;
+import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class LessonActivity extends AppCompatActivity {
@@ -44,8 +47,8 @@ public class LessonActivity extends AppCompatActivity {
         NextButtonFragment f1 = new LessonSplashIntroFragment();
 
         StoryIntroFragment f2 = new StoryIntroFragment();
-        f2.setCaptionString(getResources().getString(R.string.lesson_1_story_intro_caption));
-        f2.setStoryIntroString(getResources().getString(R.string.lesson_1_story_intro));
+        f2.setCaptionString(getString(R.string.lesson_1_story_intro_caption));
+        f2.setStoryIntroString(getString(R.string.lesson_1_story_intro));
 
         StoryDialogueFragment f3 = new StoryDialogueRightFragment();
         f3.setDialogueString(R.string.lesson_1_dialogue_1, getResources());
@@ -81,7 +84,19 @@ public class LessonActivity extends AppCompatActivity {
         TheoryModelFragment f9 = new TheoryModelFragment();
         f9.setTheoryModelText(getResources().getString(R.string.lesson_1_theory_model));
 
-        for (NextButtonFragment f: Arrays.asList(f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
+        ExamplesFragment f10 = new ExamplesFragment();
+        f10.setCaptionString(getString(R.string.lesson_1_examples_caption));
+        f10.setUnmetNeedsAndSolutionsArrayList(new ArrayList<>(Arrays.asList(
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_1), getString(R.string.lesson_1_example_solution_1)),
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_2), getString(R.string.lesson_1_example_solution_2)),
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_3), getString(R.string.lesson_1_example_solution_3)),
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_4), getString(R.string.lesson_1_example_solution_4)),
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_5), getString(R.string.lesson_1_example_solution_5)),
+                new UnmetNeedAndSolution(getString(R.string.lesson_1_example_unmet_need_6), getString(R.string.lesson_1_example_solution_6))
+        )));
+
+
+        for (NextButtonFragment f: Arrays.asList(f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment)f).setLessonNumber(lessonNumber);
             }

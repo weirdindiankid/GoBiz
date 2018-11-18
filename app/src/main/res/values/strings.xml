@@ -39,4 +39,18 @@
     <string name="theory_model_subheader">Theory/Model</string>
     <string name="lesson_1_theory_model">Most successful new businesses address two related issues – one is an unmet customer need; the second is a new idea for meeting this need, either a new business approach or a new technology. For your business idea to work, you should try to consider both items. \n\nTake for example good quality coffee shops. Previously in many countries, coffee was not a luxury item, it was sold in restaurants or on street corners by vendors at low price. But as people have gotten wealthier, demand for quality coffee, a small luxury, has grown; meanwhile, some entrepreneurs spotted this new unmet need and came up with a new business model, providing quality coffee in comfortable environments – and successful cafes have sprouted up all over. \n\nTo come up with a business idea, try to think of: \n- What people need or want but don’t have. \n- Resources that you have access to and could use. \n- Your own strengths, talents and interests. \n- A problem you have experienced or observed, and for which you think you have a solution. \n\nAlways make sure these two things go together – Unmet customer needs and new, innovative solutions.</string>
     <string name="theory_model">Theory/Model</string>
+    <string name="lesson_1_examples_caption">Unmet Needs to Solutions</string>
+    <string name="example_slide_to_reveal_instruction"><![CDATA[Slide to reveal examples of unmet needs & solutions]]></string>
+    <string name="lesson_1_example_unmet_need_1">Good quality coffee</string>
+    <string name="lesson_1_example_unmet_need_2">Healthy fast food</string>
+    <string name="lesson_1_example_solution_1">Italian espresso \nin a/c café</string>
+    <string name="lesson_1_example_solution_2">Natural ingredient roadside restaurant/food stand</string>
+    <string name="lesson_1_example_unmet_need_3">Low cost stylish clothes</string>
+    <string name="lesson_1_example_solution_3">T-shirts designed by local young artists, silk screened</string>
+    <string name="lesson_1_example_unmet_need_4">Fast Khmer translation</string>
+    <string name="lesson_1_example_solution_4">Online service 24/7</string>
+    <string name="lesson_1_example_unmet_need_5">Tourists want local \'experience\'</string>
+    <string name="lesson_1_example_solution_5">Customized tours involving local community</string>
+    <string name="lesson_1_example_unmet_need_6">Wedding party food</string>
+    <string name="lesson_1_example_solution_6">Baking service delivered by moto</string>
 </resources>
