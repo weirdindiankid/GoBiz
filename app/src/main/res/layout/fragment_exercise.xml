@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="100">
+
+    <include
+        layout="@layout/lesson_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginTop="@dimen/lesson_fragment_layout_padding"
+        android:layout_weight="10"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/lesson_fragment_layout_padding"
+        android:paddingTop="@dimen/lesson_fragment_layout_padding"
+        android:paddingRight="@dimen/lesson_fragment_layout_padding"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/notebook_pen"
+            tools:layout_editor_absoluteY="26dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+            android:layout_weight="4.7"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="16dp"
+                android:paddingRight="8dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/exercise"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/instructions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:maxLines="1"
+                    android:textColor="#000"
+                    android:textStyle="italic"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    tools:text="@string/lesson_1_exercise_instructions"/>
+
+                <TextView
+                    android:id="@+id/exercise_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:text="@string/lesson_1_story_intro"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/next_button"
+        android:layout_width="@dimen/next_button_dimen"
+        android:layout_height="@dimen/next_button_dimen"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+        android:src="@drawable/next"/>
+
+</LinearLayout>
