@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
 import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
+import com.example.vaibh.gobiz.fragments.content.ExerciseContinuedFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseFragment;
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
@@ -100,7 +101,10 @@ public class LessonActivity extends AppCompatActivity {
         f11.setExerciseString(getString(R.string.lesson_1_exercise_part_1));
         f11.setInstructionsString(getString(R.string.lesson_1_exercise_instructions));
 
-        for (NextButtonFragment f: Arrays.asList(f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
+        ExerciseContinuedFragment f12 = new ExerciseContinuedFragment();
+        f12.setExerciseString(getString(R.string.lesson_1_exercise_part_2));
+
+        for (NextButtonFragment f: Arrays.asList(f12, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment)f).setLessonNumber(lessonNumber);
             }

@@ -56,4 +56,7 @@
     <string name="exercise">Exercise</string>
     <string name="lesson_1_exercise_instructions">To find a good business idea, do the following:</string>
     <string name="lesson_1_exercise_part_1">On one side of a piece of paper 5 or 10 unmet needs you know about – things you wish you had in your everyday life, or that people you know have mentioned – like good quality coffee (or low priced t-shirts, or designer candles…).</string>
+    <string name="lesson">Lesson</string>
+    <string name="continued">(continued)</string>
+    <string name="lesson_1_exercise_part_2">Then, on the other side of the paper, try coming up with solutions to these unmet needs, innovative things that could be done to address them.</string>
 </resources>

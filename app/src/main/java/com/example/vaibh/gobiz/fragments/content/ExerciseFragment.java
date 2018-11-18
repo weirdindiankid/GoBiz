@@ -38,7 +38,7 @@ public class ExerciseFragment extends HeaderAndSubheaderFragment {
         instructionsView.setText(bundle.getString(INSTRUCTIONS));
     }
 
-    private void setupExerciseText(View view) {
+    protected void setupExerciseText(View view) {
         TextView exerciseView =  view.findViewById(R.id.exercise_text);
         Bundle bundle = this.getArguments();
         assert bundle != null;

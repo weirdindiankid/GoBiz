@@ -44,6 +44,7 @@ public class ExamplesFragment extends HeaderAndSubheaderFragment {
         args.putParcelableArrayList(UNMET_NEEDS_AND_SOLUTIONS, unmetNeedsAndSolutions);
         this.setArguments(args);
     }
+
      private void setupExamplesList(View view) {
          Bundle bundle = this.getArguments();
          assert bundle != null;
