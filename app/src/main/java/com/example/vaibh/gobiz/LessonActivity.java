@@ -16,6 +16,7 @@ import com.example.vaibh.gobiz.fragments.content.StoryDialogueMiddleLeft;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueRightFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
+import com.example.vaibh.gobiz.fragments.content.TheoryModelFragment;
 
 import java.util.Arrays;
 
@@ -77,8 +78,10 @@ public class LessonActivity extends AppCompatActivity {
                 getResources().getString(R.string.lesson_1_story_question_3)
         );
 
+        TheoryModelFragment f9 = new TheoryModelFragment();
+        f9.setTheoryModelText(getResources().getString(R.string.lesson_1_theory_model));
 
-        for (NextButtonFragment f: Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8)) {
+        for (NextButtonFragment f: Arrays.asList(f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment)f).setLessonNumber(lessonNumber);
             }

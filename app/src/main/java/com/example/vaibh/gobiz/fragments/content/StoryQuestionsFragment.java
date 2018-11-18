@@ -22,9 +22,13 @@ public class StoryQuestionsFragment extends HeaderAndSubheaderFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_story_questions, container, false);
-        setupNextButton(view);
+
         setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), "Story - Questions");
+        setupHeaders(view);
+
+        setupNextButton(view);
         setupQuestions(view);
+
         return view;
     }
 
