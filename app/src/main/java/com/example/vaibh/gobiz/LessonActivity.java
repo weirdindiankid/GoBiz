@@ -14,6 +14,7 @@ import com.example.vaibh.gobiz.fragments.content.StoryDialogueFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueLeftFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueMiddleLeft;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueRightFragment;
+import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
 
 import java.util.Arrays;
@@ -69,8 +70,15 @@ public class LessonActivity extends AppCompatActivity {
         f7.setDialogueString(R.string.lesson_1_dialogue_5, getResources());
         f7.setDialogueImageResource(R.drawable.dialogue_5);
 
+        StoryQuestionsFragment f8 = new StoryQuestionsFragment();
+        f8.setQuestionStrings(
+                getResources().getString(R.string.lesson_1_story_question_1),
+                getResources().getString(R.string.lesson_1_story_question_2),
+                getResources().getString(R.string.lesson_1_story_question_3)
+        );
 
-        for (NextButtonFragment f: Arrays.asList(f1, f2, f3, f4, f5, f6, f7)) {
+
+        for (NextButtonFragment f: Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment)f).setLessonNumber(lessonNumber);
             }

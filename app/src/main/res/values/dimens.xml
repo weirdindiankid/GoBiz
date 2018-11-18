@@ -3,4 +3,6 @@
     <dimen name="next_button_dimen">40dp</dimen>
     <dimen name="lesson_fragment_layout_padding">25dp</dimen>
     <dimen name="dialogue_text_size">16sp</dimen>
+    <dimen name="question_box_padding">8dp</dimen>
+    <dimen name="vertical_space_between_questions">12dp</dimen>
 </resources>
