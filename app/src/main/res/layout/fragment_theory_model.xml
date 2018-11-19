@@ -41,6 +41,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
             android:background="@drawable/black_border"
+            android:fadeScrollbars="false"
             >
 
             <LinearLayout
