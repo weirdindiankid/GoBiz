@@ -10,6 +10,7 @@ import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseContinuedFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseFragment;
+import com.example.vaibh.gobiz.fragments.content.GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment;
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.NextButtonFragment;
@@ -111,7 +112,14 @@ public class LessonActivity extends AppCompatActivity {
         f13.setQuestion1String(getString(R.string.lesson_1_bringing_it_back_question_1));
         f13.setQuestion2String(getString(R.string.lesson_1_bringing_it_back_question_2));
 
-        for (NextButtonFragment f : Arrays.asList(f12, f13, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
+        GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment f14 = new GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment();
+        f14.setHeaderStrings(getString(R.string.lesson) + " " + lessonNumber, getString(R.string.success_story));
+        f14.setImageResource(R.drawable.interview);
+        f14.setBody(getString(R.string.lesson_1_success_story));
+        f14.setCaptionString(getString(R.string.entrepreneurship_success_story));
+
+
+        for (NextButtonFragment f : Arrays.asList(f14, f12, f13, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
