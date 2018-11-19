@@ -14,6 +14,7 @@ import com.example.vaibh.gobiz.fragments.content.GenericHeaderImageCaptionScroll
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.NextButtonFragment;
+import com.example.vaibh.gobiz.fragments.content.ReviewFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueCenterFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueLeftFragment;
@@ -118,8 +119,22 @@ public class LessonActivity extends AppCompatActivity {
         f14.setBody(getString(R.string.lesson_1_success_story));
         f14.setCaptionString(getString(R.string.entrepreneurship_success_story));
 
+        ReviewFragment f15 = new ReviewFragment();
+        f15.setCaptionString(getString(R.string.lesson_1_review_caption));
+        f15.setEndNoteString(getString(R.string.lesson_1_review_end_note));
+        f15.setPromptString(getString(R.string.lesson_1_review_prompt));
+        f15.setQuestion1String(getString(R.string.lesson_1_bringing_it_back_question_1));
+        f15.setQuestion2String(getString(R.string.lesson_1_bringing_it_back_question_2));
+        f15.setReviewListStrings(new ArrayList<>(Arrays.asList(
+                getString(R.string.lesson_1_review_list_question_1),
+                getString(R.string.lesson_1_review_list_question_2),
+                getString(R.string.lesson_1_review_list_question_3),
+                getString(R.string.lesson_1_review_list_question_4),
+                getString(R.string.lesson_1_review_list_question_5),
+                getString(R.string.lesson_1_review_list_question_6)
+        )));
 
-        for (NextButtonFragment f : Arrays.asList(f14, f12, f13, f11, f10, f8, f9, f1, f2, f3, f4, f5, f6, f7)) {
+        for (NextButtonFragment f : Arrays.asList(f15, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
