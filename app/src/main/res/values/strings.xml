@@ -82,4 +82,15 @@
     <string name="lesson_1_factoid_1">An estimated 50% of business failure is the result of incompetence.</string>
     <string name="lesson_1_factoid_2">Of the other half, 30% is due to lack of managerial experience, 10% due to lack of general business experience, and the rest the result of fraud, natural disasters and neglect.</string>
     <string name="lesson_1_factoid_3">With careful planning, much of this can be avoided, increasing your chances of success.</string>
+    <string name="conclusion">Conclusion</string>
+    <string name="lesson_1_conclusion">Entrepreneurship is not easy, but it can be really rewarding. \n\nThe fact is, most entrepreneurs don’t succeed in their first try at starting a business. We learn from our mistakes. But the best way to avoid mistakes is to be aware of what they potentially can be. Consider the following as you go forward, and perhaps adjust as needed. \n\nThe most common errors made by people starting businesses include:\n
+        \n\u2022\t Under-estimating the costs or resources needed.
+        \n\u2022\t Not meeting customers’ quality requirements.
+        \n\u2022\t Being weak on sales and marketing of your new business
+        \n\u2022\t Not managing the finances well – poor accounting.
+        \n\u2022\t Not being flexible and adjusting as you start.
+        \n\u2022\t Not knowing your competition, and how you can do better than them.
+        \n\u2022\t Setting your price too high or too low.
+        \n\u2022\t Thinking that success will come easily, quickly or without lots of work.
+        \n\nThe following modules will help on much of this – but the best start will be for you to consider these points and keep improving your plan.</string>
 </resources>

@@ -20,15 +20,17 @@ public class GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment exten
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_generic_header_image_caption_scrollable_body_next_button, container, false);
+        View view = inflater.inflate(R.layout.fragment_conclusion, container, false);
+        setupFragment(view);
+        return view;
+    }
 
+    protected void setupFragment(View view) {
         setupHeaders(view);
         setupImage(view);
         setupCaption(view);
         setupBody(view);
         setupNextButton(view);
-
-        return view;
     }
 
     public void setImageResource(int imageResource) {

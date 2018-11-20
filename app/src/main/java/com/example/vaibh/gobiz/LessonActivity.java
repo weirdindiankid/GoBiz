@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
+import com.example.vaibh.gobiz.fragments.content.ConclusionFragment;
 import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseContinuedFragment;
@@ -144,7 +145,13 @@ public class LessonActivity extends AppCompatActivity {
                 new Factoid(getString(R.string.lesson_1_factoid_3), R.drawable.check)
         )));
 
-        for (NextButtonFragment f : Arrays.asList(f16, f11, f2, f1, f3, f4, f5, f6, f7, f8, f9, f10, f12, f13, f14)) {
+        ConclusionFragment f17 = new ConclusionFragment();
+        f17.setCaptionString("Conclusion");
+        f17.setImageResource(R.drawable.student);
+        f17.setHeaderStrings(getString(R.string.lesson) + " " + lessonNumber, getString(R.string.conclusion));
+        f17.setBody(getString(R.string.lesson_1_conclusion));
+
+        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f12, f13, f14, f15, f16, f17)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
