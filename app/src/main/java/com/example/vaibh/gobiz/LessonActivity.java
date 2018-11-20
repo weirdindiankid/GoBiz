@@ -16,6 +16,7 @@ import com.example.vaibh.gobiz.fragments.content.GenericHeaderImageCaptionScroll
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.NextButtonFragment;
+import com.example.vaibh.gobiz.fragments.content.QuizIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.ReviewFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueCenterFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueFragment;
@@ -151,7 +152,9 @@ public class LessonActivity extends AppCompatActivity {
         f17.setHeaderStrings(getString(R.string.lesson) + " " + lessonNumber, getString(R.string.conclusion));
         f17.setBody(getString(R.string.lesson_1_conclusion));
 
-        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f12, f13, f14, f15, f16, f17)) {
+        QuizIntroFragment f18 = new QuizIntroFragment();
+
+        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }

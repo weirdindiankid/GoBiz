@@ -30,7 +30,7 @@
     <string name="lesson_1_dialogue_1">\"I think that it will be complicated and expensive to find all the tools and materials to make jewelry. What do you think, Anwar?\"</string>
     <string name="lesson_1_dialogue_2">\"I think that people need clothes more than jewelry.\"</string>
     <string name="lesson_1_dialogue_3">\"You are right. It is probably better to open a clothing shop.\"</string>
-    <string name="lesson_1_dialogue_4">\"I am experienced in banking, but I don\'t feel skilled enough to open a restaurant.\"</string>
+    <string name="lesson_1_dialogue_4">\"I am experienced in baking, but I don\'t feel skilled enough to open a restaurant.\"</string>
     <string name="lesson_1_dialogue_5">\"Everyone needs to buy bread every day. Why not open a bakery?\"</string>
     <string name="lesson_1_story_question_1">What are Zara and Anwar trying to decide?</string>
     <string name="lesson_1_story_question_2">What factors are they considering when deciding on a business idea?</string>
@@ -55,7 +55,7 @@
     <string name="lesson_1_example_solution_6">Baking service delivered by moto</string>
     <string name="exercise">Exercise</string>
     <string name="lesson_1_exercise_instructions">To find a good business idea, do the following:</string>
-    <string name="lesson_1_exercise_part_1">On one side of a piece of paper 5 or 10 unmet needs you know about – things you wish you had in your everyday life, or that people you know have mentioned – like good quality coffee (or low priced t-shirts, or designer candles…).</string>
+    <string name="lesson_1_exercise_part_1">On one side of a piece of paper write 5 or 10 unmet needs you know about – things you wish you had in your everyday life, or that people you know have mentioned – like good quality coffee (or low priced t-shirts, or designer candles…).</string>
     <string name="lesson">Lesson</string>
     <string name="continued">(continued)</string>
     <string name="lesson_1_exercise_part_2">Then, on the other side of the paper, try coming up with solutions to these unmet needs, innovative things that could be done to address them.</string>
@@ -93,4 +93,6 @@
         \n\u2022\t Setting your price too high or too low.
         \n\u2022\t Thinking that success will come easily, quickly or without lots of work.
         \n\nThe following modules will help on much of this – but the best start will be for you to consider these points and keep improving your plan.</string>
+    <string name="quiz">Quiz</string>
+    <string name="quiz_intro">Ready to Test Your Knowledge? \n\nLet\'s take a short quiz!</string>
 </resources>
