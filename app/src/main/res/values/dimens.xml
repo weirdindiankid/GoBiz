@@ -5,4 +5,5 @@
     <dimen name="dialogue_text_size">16sp</dimen>
     <dimen name="question_box_padding">8dp</dimen>
     <dimen name="vertical_space_between_questions">12dp</dimen>
+    <dimen name="factoid_icon_dimen">40dp</dimen>
 </resources>

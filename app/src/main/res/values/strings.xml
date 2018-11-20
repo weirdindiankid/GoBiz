@@ -78,4 +78,8 @@
     <string name="lesson_1_review_list_question_4">4. Do I have the resources and money to start the business? If not, can I get them - where can I get funding or resources?</string>
     <string name="lesson_1_review_list_question_5">5. Do I have the skills needed? If not, how can I get them?</string>
     <string name="lesson_1_review_list_question_6">6. Will the competition allow my business to succeed?</string>
+    <string name="factoids">Factoids</string>
+    <string name="lesson_1_factoid_1">An estimated 50% of business failure is the result of incompetence.</string>
+    <string name="lesson_1_factoid_2">Of the other half, 30% is due to lack of managerial experience, 10% due to lack of general business experience, and the rest the result of fraud, natural disasters and neglect.</string>
+    <string name="lesson_1_factoid_3">With careful planning, much of this can be avoided, increasing your chances of success.</string>
 </resources>

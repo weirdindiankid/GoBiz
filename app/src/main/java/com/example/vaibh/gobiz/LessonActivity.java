@@ -10,6 +10,7 @@ import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseContinuedFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseFragment;
+import com.example.vaibh.gobiz.fragments.content.FactoidsFragment;
 import com.example.vaibh.gobiz.fragments.content.GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment;
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
@@ -23,6 +24,7 @@ import com.example.vaibh.gobiz.fragments.content.StoryDialogueRightFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.TheoryModelFragment;
+import com.example.vaibh.gobiz.pojos.Factoid;
 import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
 
 import java.util.ArrayList;
@@ -134,7 +136,15 @@ public class LessonActivity extends AppCompatActivity {
                 getString(R.string.lesson_1_review_list_question_6)
         )));
 
-        for (NextButtonFragment f : Arrays.asList(f15, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14)) {
+        FactoidsFragment f16 = new FactoidsFragment();
+        f16.setCaptionString(getString(R.string.factoids));
+        f16.setFactoidsList(new ArrayList<>(Arrays.asList(
+                new Factoid(getString(R.string.lesson_1_factoid_1), R.drawable.check),
+                new Factoid(getString(R.string.lesson_1_factoid_2), R.drawable.check),
+                new Factoid(getString(R.string.lesson_1_factoid_3), R.drawable.check)
+        )));
+
+        for (NextButtonFragment f : Arrays.asList(f16, f11, f2, f1, f3, f4, f5, f6, f7, f8, f9, f10, f12, f13, f14)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
