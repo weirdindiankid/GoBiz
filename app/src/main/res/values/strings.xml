@@ -108,5 +108,6 @@
     <string name="lesson_1_quiz_question_3_answer_4">When you should start your business</string>
     <string name="lesson_1_quiz_question_4">True of False - Most business startups fail because of a lack of experience.</string>
     <string name="question_counter">Question %s/%s</string>
+    <string name="please_answer_all_questions">Please answer all questions</string>
 
 </resources>

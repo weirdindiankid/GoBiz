@@ -10,6 +10,7 @@ public class QuizQuestion implements Parcelable {
     private ArrayList<String> options;
     private String question;
     private int answerIndex;
+    private int selectedIndex = -1;
 
     public QuizQuestion(String question, ArrayList<String> options, int answerIndex) {
         assert question != null;
@@ -17,7 +18,7 @@ public class QuizQuestion implements Parcelable {
 
         this.options = options;
         this.answerIndex = answerIndex;
-        setQuestion(question);
+        this.question = question;
     }
 
     public ArrayList<String> getOptions() {
@@ -28,13 +29,16 @@ public class QuizQuestion implements Parcelable {
         return answerIndex;
     }
 
-
     public String getQuestion() {
         return question;
     }
 
-    protected void setQuestion(String question) {
-        this.question = question;
+    public int getSelectedIndex() {
+        return selectedIndex;
+    }
+
+    public void setSelectedIndex(int selectedIndex) {
+        this.selectedIndex = selectedIndex;
     }
 
     protected QuizQuestion(Parcel in) {
@@ -46,6 +50,7 @@ public class QuizQuestion implements Parcelable {
         }
         question = in.readString();
         answerIndex = in.readInt();
+        selectedIndex = in.readInt();
     }
 
     @Override
@@ -63,6 +68,7 @@ public class QuizQuestion implements Parcelable {
         }
         dest.writeString(question);
         dest.writeInt(answerIndex);
+        dest.writeInt(selectedIndex);
     }
 
     @SuppressWarnings("unused")

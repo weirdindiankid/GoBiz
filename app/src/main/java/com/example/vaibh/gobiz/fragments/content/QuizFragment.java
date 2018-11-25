@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.adapters.QuizQuestionsAdapter;
@@ -32,6 +33,48 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
         setupNextButton(view);
 
         return view;
+    }
+
+    @Override
+    protected void setupNextButton(View view) {
+        View nextButton = view.findViewById(R.id.next_button);
+        if (nextButton != null) {
+            nextButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    // get question objects
+                    View root = (View) view.getParent();
+                    ExpandableHeightListView listView = root.findViewById(R.id.quiz_questions_list);
+
+                    ArrayList<QuizQuestion> questions = new ArrayList<>();
+
+                    for (int i = 0; i < listView.getCount(); i++) {
+                        QuizQuestion question = (QuizQuestion) listView.getItemAtPosition(i);
+                        questions.add(question);
+                    }
+
+                    // ensure all were answered and that they passed
+                    int numAnswered = 0;
+                    int numCorrect = 0;
+
+                    for (QuizQuestion question : questions) {
+                        if (question.getSelectedIndex() != -1) {
+                            numAnswered += 1;
+                        }
+                        if (question.getSelectedIndex() == question.getAnswerIndex()) {
+                            numCorrect += 1;
+                        }
+                    }
+
+                    if (numAnswered < questions.size()) {
+                        Toast.makeText(getActivity(), getString(R.string.please_answer_all_questions), Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), String.format("%s/%s correct", String.valueOf(numCorrect), String.valueOf(questions.size())), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     public void setQuestionsList(ArrayList<QuizQuestion> arr) {
@@ -79,4 +122,5 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
 
         caption.setText(bundle.getString(CAPTION));
     }
+
 }

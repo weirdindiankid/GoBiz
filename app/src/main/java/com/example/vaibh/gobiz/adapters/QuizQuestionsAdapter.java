@@ -23,7 +23,7 @@ public class QuizQuestionsAdapter extends ArrayAdapter<QuizQuestion> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        QuizQuestion question = getItem(position);
+        final QuizQuestion question = getItem(position);
         assert question != null;
 
         ArrayList<String> options = question.getOptions();
@@ -45,7 +45,9 @@ public class QuizQuestionsAdapter extends ArrayAdapter<QuizQuestion> {
                 convertView.findViewById(R.id.option_4)
         ));
 
-        for (View container : optionContainers) {
+        for (int i = 0; i < optionContainers.size(); i++) {
+            final int index = i;
+            View container = optionContainers.get(i);
             container.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -53,6 +55,7 @@ public class QuizQuestionsAdapter extends ArrayAdapter<QuizQuestion> {
                         container.setBackgroundColor(Color.parseColor(getContext().getString(R.string.default_background)));
                     }
                     view.setBackgroundColor(Color.parseColor(getContext().getString(R.string.selected_list_item_bg)));
+                    question.setSelectedIndex(index);
                 }
             });
         }

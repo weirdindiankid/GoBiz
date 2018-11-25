@@ -182,7 +182,7 @@ public class LessonActivity extends AppCompatActivity {
                                 getString(R.string.lesson_1_quiz_question_3_answer_3),
                                 getString(R.string.lesson_1_quiz_question_3_answer_4)
                         )),
-                        0
+                        1
                 ),
                 new TrueFalseQuestion(
                         getString(R.string.lesson_1_quiz_question_4),
