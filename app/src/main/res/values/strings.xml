@@ -93,6 +93,20 @@
         \n\u2022\t Setting your price too high or too low.
         \n\u2022\t Thinking that success will come easily, quickly or without lots of work.
         \n\nThe following modules will help on much of this – but the best start will be for you to consider these points and keep improving your plan.</string>
-    <string name="quiz">Quiz</string>
     <string name="quiz_intro">Ready to Test Your Knowledge? \n\nLet\'s take a short quiz!</string>
+    <string name="quiz">Quiz</string>
+    <string name="lesson_1_quiz_question_1">Which of the following is a first consideration for success in starting a new business?</string>
+    <string name="lesson_1_quiz_question_1_answer_1">A customer need that isn\'t being met</string>
+    <string name="lesson_1_quiz_question_1_answer_2">A business plan that considers marketing</string>
+    <string name="lesson_1_quiz_question_1_answer_3">Funding from the bank or government</string>
+    <string name="lesson_1_quiz_question_1_answer_4">Support from your family, or a family business</string>
+    <string name="lesson_1_quiz_question_2">True or False - The key to finding a good business idea for startup is matching unmet customer needs with good solutions to meeting those needs.</string>
+    <string name="lesson_1_quiz_question_3">Which of the following questions is least important to consider:</string>
+    <string name="lesson_1_quiz_question_3_answer_1">How much money do you have in the bank to start business</string>
+    <string name="lesson_1_quiz_question_3_answer_2">What business your family is in</string>
+    <string name="lesson_1_quiz_question_3_answer_3">What your potential customers need</string>
+    <string name="lesson_1_quiz_question_3_answer_4">When you should start your business</string>
+    <string name="lesson_1_quiz_question_4">True of False - Most business startups fail because of a lack of experience.</string>
+    <string name="question_counter">Question %s/%s</string>
+
 </resources>

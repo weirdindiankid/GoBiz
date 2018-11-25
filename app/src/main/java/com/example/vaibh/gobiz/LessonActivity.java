@@ -16,6 +16,7 @@ import com.example.vaibh.gobiz.fragments.content.GenericHeaderImageCaptionScroll
 import com.example.vaibh.gobiz.fragments.content.HeaderAndSubheaderFragment;
 import com.example.vaibh.gobiz.fragments.content.LessonSplashIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.NextButtonFragment;
+import com.example.vaibh.gobiz.fragments.content.QuizFragment;
 import com.example.vaibh.gobiz.fragments.content.QuizIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.ReviewFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryDialogueCenterFragment;
@@ -27,6 +28,8 @@ import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.TheoryModelFragment;
 import com.example.vaibh.gobiz.pojos.Factoid;
+import com.example.vaibh.gobiz.pojos.QuizQuestion;
+import com.example.vaibh.gobiz.pojos.TrueFalseQuestion;
 import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
 
 import java.util.ArrayList;
@@ -154,7 +157,40 @@ public class LessonActivity extends AppCompatActivity {
 
         QuizIntroFragment f18 = new QuizIntroFragment();
 
-        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18)) {
+        QuizFragment f19 = new QuizFragment();
+        f19.setCaptionString(getString(R.string.quiz));
+        f19.setQuestionsList(new ArrayList<>(Arrays.asList(
+                new QuizQuestion(
+                        getString(R.string.lesson_1_quiz_question_1),
+                        new ArrayList<String>(Arrays.asList(
+                                getString(R.string.lesson_1_quiz_question_1_answer_1),
+                                getString(R.string.lesson_1_quiz_question_1_answer_2),
+                                getString(R.string.lesson_1_quiz_question_1_answer_3),
+                                getString(R.string.lesson_1_quiz_question_1_answer_4)
+                        )),
+                        0
+                ),
+                new TrueFalseQuestion(
+                        getString(R.string.lesson_1_quiz_question_2),
+                        true
+                ),
+                new QuizQuestion(
+                        getString(R.string.lesson_1_quiz_question_3),
+                        new ArrayList<String>(Arrays.asList(
+                                getString(R.string.lesson_1_quiz_question_3_answer_1),
+                                getString(R.string.lesson_1_quiz_question_3_answer_2),
+                                getString(R.string.lesson_1_quiz_question_3_answer_3),
+                                getString(R.string.lesson_1_quiz_question_3_answer_4)
+                        )),
+                        0
+                ),
+                new TrueFalseQuestion(
+                        getString(R.string.lesson_1_quiz_question_4),
+                        false
+                )
+        )));
+
+        for (NextButtonFragment f : Arrays.asList(f19, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }

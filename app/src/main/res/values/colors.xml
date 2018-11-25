@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="swipe_to_reveal_blue">#21cbf3</color>
+    <string name="default_background">#fafafa</string>
+    <string name="selected_list_item_bg">#c5f2ff</string>
 </resources>

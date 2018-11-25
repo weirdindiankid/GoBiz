@@ -16,6 +16,8 @@ public class QuizIntroFragment extends HeaderAndSubheaderFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz_intro, container, false);
         setHeaderStrings(getString(R.string.lesson) + " " + getLessonNumber(), getString(R.string.quiz));
+        setupHeaders(view);
+        setupNextButton(view);
 
         return view;
     }
