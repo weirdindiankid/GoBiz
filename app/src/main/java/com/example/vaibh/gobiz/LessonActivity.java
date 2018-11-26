@@ -1,11 +1,13 @@
 package com.example.vaibh.gobiz;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
+import com.example.vaibh.gobiz.fragments.content.AnswersFragment;
 import com.example.vaibh.gobiz.fragments.content.ConclusionFragment;
 import com.example.vaibh.gobiz.fragments.content.ExamplesFragment;
 import com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFragment;
@@ -34,6 +36,7 @@ import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class LessonActivity extends AppCompatActivity {
 
@@ -41,6 +44,7 @@ public class LessonActivity extends AppCompatActivity {
     private LessonContentPagerAdapter lessonContentPagerAdapter;
     private ViewPager fragmentContainer;
 
+    private int previousPage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,7 @@ public class LessonActivity extends AppCompatActivity {
         setupViewPager(fragmentContainer, 1);
     }
 
-    private void setupViewPager(ViewPager viewPager, int lessonNumber) {
+    private void setupViewPager(final ViewPager viewPager, int lessonNumber) {
         viewPager.setPageMargin(100);
 
         NextButtonFragment f1 = new LessonSplashIntroFragment();
@@ -190,7 +194,7 @@ public class LessonActivity extends AppCompatActivity {
                 )
         )));
 
-        for (NextButtonFragment f : Arrays.asList(f19, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18)) {
+        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
@@ -198,6 +202,44 @@ public class LessonActivity extends AppCompatActivity {
         }
 
         viewPager.setAdapter(lessonContentPagerAdapter);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {}
+
+            @Override
+            public void onPageSelected(int i) {
+                Fragment f = ((LessonContentPagerAdapter) (Objects.requireNonNull(viewPager.getAdapter()))).getItem(i);
+                if (f instanceof AnswersFragment) {
+                    AnswersFragment t = (AnswersFragment) f;
+                    t.refreshAnswers();
+                } else {
+                    // save answers if we're moving away from an answers fragment
+                    boolean movedForward = i > previousPage;
+                    if (movedForward) {
+                        if (i > 0) {
+                            Fragment prev = ((LessonContentPagerAdapter) (Objects.requireNonNull(viewPager.getAdapter()))).getItem(i - 1);
+                            if (prev instanceof AnswersFragment) {
+                                ((AnswersFragment) prev).saveAnswers();
+                            }
+                        }
+                    } else {
+                        if (i < viewPager.getAdapter().getCount() - 1) {
+                            Fragment next = ((LessonContentPagerAdapter) (Objects.requireNonNull(viewPager.getAdapter()))).getItem(i + 1);
+                            if (next instanceof AnswersFragment) {
+                                ((AnswersFragment) next).saveAnswers();
+                            }
+                        }
+                    }
+                }
+
+                previousPage = i;
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+            }
+        });
     }
 
     public void setViewPager(int fragmentNumber) {

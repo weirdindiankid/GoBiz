@@ -1,20 +1,16 @@
 package com.example.vaibh.gobiz.fragments.content;
 
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.vaibh.gobiz.R;
 
-public class ExerciseBringingItBackFragment extends HeaderAndSubheaderFragment {
+public class ExerciseBringingItBackFragment extends AnswersFragment {
 
     private static final String INSTRUCTIONS = "INSTRUCTIONS";
     private static final String PROMPT = "PROMPT";
@@ -28,50 +24,15 @@ public class ExerciseBringingItBackFragment extends HeaderAndSubheaderFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercise_bringing_it_back, container, false);
-
+        setRoot(view);
         setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.exercise));
         setupHeaders(view);
         setupInstructions(view);
         setupPrompt(view);
         setupQuestions(view);
-        setupAnswers(view);
         setupNextButton(view);
 
         return view;
-    }
-
-    private void setupAnswers(View view) {
-        EditText answer1 = view.findViewById(R.id.answer_1);
-        EditText answer2 = view.findViewById(R.id.answer_2);
-
-        answer1.setText(PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(String.valueOf(getLessonNumber()) + ANSWER_1, ""));
-        answer2.setText(PreferenceManager.getDefaultSharedPreferences(getActivity()).getString(String.valueOf(getLessonNumber()) + ANSWER_2, ""));
-
-        answer1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putString(String.valueOf(getLessonNumber()) + ANSWER_1, editable.toString()).apply();
-            }
-        });
-
-        answer2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                PreferenceManager.getDefaultSharedPreferences(getActivity()).edit().putString(String.valueOf(getLessonNumber()) + ANSWER_2, editable.toString()).apply();
-            }
-        });
     }
 
     public void setInstructionsString(String str) {
