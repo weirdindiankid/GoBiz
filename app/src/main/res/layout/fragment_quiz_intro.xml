@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/lesson_fragment_layout_padding"
+    android:paddingTop="@dimen/lesson_fragment_layout_padding"
+    android:paddingRight="@dimen/lesson_fragment_layout_padding"
+    >
+
+    <include
+        layout="@layout/lesson_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="100dp"
+        android:text="@string/quiz_intro"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="50sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="1sp"
+        app:autoSizeTextType="uniform"/>
+
+
+    <ImageView
+        android:id="@+id/next_button"
+        android:layout_width="@dimen/next_button_dimen"
+        android:layout_height="@dimen/next_button_dimen"
+        android:layout_gravity="end"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+        android:scaleType="fitEnd"
+        android:src="@drawable/next"
+        tools:ignore="ContentDescription"/>
+
+</LinearLayout>
+
