@@ -37,15 +37,10 @@ public class AnswersFragment extends HeaderAndSubheaderFragment {
                 SharedPrefsUtil sp = SharedPrefsUtil.getInstance(getActivity());
 
                 String t1 = answer1.getText().toString();
-                if (!t1.isEmpty()) {
-                    sp.setString(String.valueOf(getLessonNumber()) + ANSWER_1, t1);
-                }
+                sp.setString(String.valueOf(getLessonNumber()) + ANSWER_1, t1);
 
                 String t2 = answer2.getText().toString();
-                if (!t2.isEmpty()) {
-                    sp.setString(String.valueOf(getLessonNumber()) + ANSWER_2, t2);
-                }
-
+                sp.setString(String.valueOf(getLessonNumber()) + ANSWER_2, t2);
             }
         }
     }
