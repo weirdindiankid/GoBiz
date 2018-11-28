@@ -109,5 +109,8 @@
     <string name="lesson_1_quiz_question_4">True of False - Most business startups fail because of a lack of experience.</string>
     <string name="question_counter">Question %s/%s</string>
     <string name="please_answer_all_questions">Please answer all questions</string>
+    <string name="lessons">Lessons</string>
+    <string name="course_1_lesson_1_title">Find your business idea</string>
+    <string name="lorem_ipsum_2_lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium, tortor ut commodo luctus, lacus orci suscipit massa, vitae maximus lorem lacus vel ex.</string>
 
 </resources>

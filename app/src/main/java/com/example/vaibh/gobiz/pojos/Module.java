@@ -1,5 +1,7 @@
 package com.example.vaibh.gobiz.pojos;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
@@ -7,7 +9,7 @@ import com.google.firebase.database.DataSnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Module {
+public class Module implements Parcelable {
 
     String courseName;
     String conclusion;
@@ -26,21 +28,20 @@ public class Module {
 
 
     /**
-     *
      * @param moduleNumber
      * @param contentSnapshot
      * @param courseName
      */
 
-    public Module(String moduleNumber, DataSnapshot contentSnapshot, String courseName){
+    public Module(String moduleNumber, DataSnapshot contentSnapshot, String courseName) {
         this.courseName = courseName;
         this.moduleNumber = moduleNumber;
         Log.d("ModuleNumber", moduleNumber);
-        Iterable<DataSnapshot> common =  contentSnapshot.child("Conclusion").child(moduleNumber).getChildren();
+        Iterable<DataSnapshot> common = contentSnapshot.child("Conclusion").child(moduleNumber).getChildren();
         for (DataSnapshot iter : common) {
             if (iter.getValue().toString() != null)
-                Log.d("Conclusion Common" ,iter.getValue().toString());
-                conclusion = iter.getValue().toString();
+                Log.d("Conclusion Common", iter.getValue().toString());
+            conclusion = iter.getValue().toString();
         }
 
         common = contentSnapshot.child("Example").child(moduleNumber).getChildren();
@@ -90,30 +91,29 @@ public class Module {
         for (DataSnapshot iter : common) {
 
             if (iter.getKey().equals(moduleNumber)) {
-                Log.d("Title Common" ,iter.getValue().toString());
+                Log.d("Title Common", iter.getValue().toString());
                 title = iter.getValue().toString();
             }
         }
 
 
-        Iterable<DataSnapshot> quiz_questions =  contentSnapshot.child("Quiz_Question").child(moduleNumber).getChildren();
-        for (DataSnapshot iter : quiz_questions){
+        Iterable<DataSnapshot> quiz_questions = contentSnapshot.child("Quiz_Question").child(moduleNumber).getChildren();
+        for (DataSnapshot iter : quiz_questions) {
             if (iter.getValue().toString() != null)
                 quizQuestions.add(iter.getValue().toString());
         }
 
-            Iterable<DataSnapshot> quiz_answers =  contentSnapshot.child("Quiz_Answer").child(moduleNumber).getChildren();
-        for (DataSnapshot iter : quiz_questions){
+        Iterable<DataSnapshot> quiz_answers = contentSnapshot.child("Quiz_Answer").child(moduleNumber).getChildren();
+        for (DataSnapshot iter : quiz_questions) {
             if (iter.getValue().toString() != null)
                 quizAnswers.add(iter.getValue().toString());
         }
 
         Log.d("Quiz", quizQuestions.toString());
-        Log.d("Title",title);
+        Log.d("Title", title);
     }
 
     /**
-     *
      * @return quizAnswers
      */
     public List<String> getQuizAnswers() {
@@ -121,7 +121,6 @@ public class Module {
     }
 
     /**
-     *
      * @return quizQuestions
      */
     public List<String> getQuizQuestions() {
@@ -129,7 +128,6 @@ public class Module {
     }
 
     /**
-     *
      * @return conclusion
      */
     public String getConclusion() {
@@ -137,7 +135,6 @@ public class Module {
     }
 
     /**
-     *
      * @return example
      */
     public String getExample() {
@@ -146,7 +143,6 @@ public class Module {
 
 
     /**
-     *
      * @return exercise
      */
     public String getExercise() {
@@ -155,7 +151,6 @@ public class Module {
 
 
     /**
-     *
      * @return factoid
      */
     public String getFactoid() {
@@ -163,7 +158,6 @@ public class Module {
     }
 
     /**
-     *
      * @return homework
      */
     public String getHomework() {
@@ -171,7 +165,6 @@ public class Module {
     }
 
     /**
-     *
      * @return introduction
      */
     public String getIntroduction() {
@@ -180,7 +173,6 @@ public class Module {
 
 
     /**
-     *
      * @return moduleNumber
      */
     public String getModuleNumber() {
@@ -188,7 +180,6 @@ public class Module {
     }
 
     /**
-     *
      * @return review
      */
     public String getReview() {
@@ -197,7 +188,6 @@ public class Module {
 
 
     /**
-     *
      * @return successStory
      */
     public String getSuccessStory() {
@@ -205,10 +195,80 @@ public class Module {
     }
 
     /**
-     *
      * @return title
      */
     public String getTitle() {
         return title;
     }
+
+    protected Module(Parcel in) {
+        courseName = in.readString();
+        conclusion = in.readString();
+        example = in.readString();
+        exercise = in.readString();
+        factoid = in.readString();
+        homework = in.readString();
+        introduction = in.readString();
+        moduleNumber = in.readString();
+        review = in.readString();
+        successStory = in.readString();
+        title = in.readString();
+        if (in.readByte() == 0x01) {
+            quizAnswers = new ArrayList<String>();
+            in.readList(quizAnswers, String.class.getClassLoader());
+        } else {
+            quizAnswers = null;
+        }
+        if (in.readByte() == 0x01) {
+            quizQuestions = new ArrayList<String>();
+            in.readList(quizQuestions, String.class.getClassLoader());
+        } else {
+            quizQuestions = null;
+        }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(courseName);
+        dest.writeString(conclusion);
+        dest.writeString(example);
+        dest.writeString(exercise);
+        dest.writeString(factoid);
+        dest.writeString(homework);
+        dest.writeString(introduction);
+        dest.writeString(moduleNumber);
+        dest.writeString(review);
+        dest.writeString(successStory);
+        dest.writeString(title);
+        if (quizAnswers == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(quizAnswers);
+        }
+        if (quizQuestions == null) {
+            dest.writeByte((byte) (0x00));
+        } else {
+            dest.writeByte((byte) (0x01));
+            dest.writeList(quizQuestions);
+        }
+    }
+
+    @SuppressWarnings("unused")
+    public static final Parcelable.Creator<Module> CREATOR = new Parcelable.Creator<Module>() {
+        @Override
+        public Module createFromParcel(Parcel in) {
+            return new Module(in);
+        }
+
+        @Override
+        public Module[] newArray(int size) {
+            return new Module[size];
+        }
+    };
 }

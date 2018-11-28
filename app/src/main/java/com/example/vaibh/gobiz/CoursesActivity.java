@@ -25,8 +25,11 @@ import java.util.Map;
 import java.util.Set;
 
 public class CoursesActivity extends AppCompatActivity {
-    public List<Module> modules = new ArrayList<>();
+    public ArrayList<Module> modules = new ArrayList<>();
     public HashMap<Course, List<Module>> courseModuleMap = new HashMap<>();
+
+    public static final String MODULES = "MODULES";
+    public static final String COURSE_MODULE_MAP = "COURSE_MODULE_MAP";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +41,12 @@ public class CoursesActivity extends AppCompatActivity {
         courseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (i == 0) {
-                    // todo: use/pass data from the db
-                    Intent intent = new Intent(getApplicationContext(), LessonActivity.class);
-                    startActivity(intent);
-                }
+                Intent intent = new Intent(getApplicationContext(), LessonsActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("MODULES", modules);
+                bundle.putSerializable(COURSE_MODULE_MAP, courseModuleMap);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
     }

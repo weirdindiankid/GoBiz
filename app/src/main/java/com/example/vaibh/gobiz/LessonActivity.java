@@ -1,5 +1,6 @@
 package com.example.vaibh.gobiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -30,6 +31,7 @@ import com.example.vaibh.gobiz.fragments.content.StoryIntroFragment;
 import com.example.vaibh.gobiz.fragments.content.StoryQuestionsFragment;
 import com.example.vaibh.gobiz.fragments.content.TheoryModelFragment;
 import com.example.vaibh.gobiz.pojos.Factoid;
+import com.example.vaibh.gobiz.pojos.Module;
 import com.example.vaibh.gobiz.pojos.QuizQuestion;
 import com.example.vaibh.gobiz.pojos.TrueFalseQuestion;
 import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
@@ -50,6 +52,12 @@ public class LessonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
+
+        Intent intent = getIntent();
+
+        // todo: use this data to setup all of the content. Blocked by needing the content in the db to be partitioned to fit the fragments
+        Module module = intent.getParcelableExtra(LessonsActivity.MODULE);
+
 
         lessonContentPagerAdapter = new LessonContentPagerAdapter(getSupportFragmentManager());
         fragmentContainer = findViewById(R.id.fragment_container);
