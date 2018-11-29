@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.adapters.UnmetNeedsAndSolutionsAdapter;
+import com.example.vaibh.gobiz.customviews.CustomViewPager;
 import com.example.vaibh.gobiz.pojos.UnmetNeedAndSolution;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class ExamplesFragment extends HeaderAndSubheaderFragment {
 
         setupNextButton(view);
         setupCaption(view);
-        setupExamplesList(view);
+        setupExamplesList(view, (CustomViewPager) container);
 
         return view;
     }
@@ -45,13 +46,13 @@ public class ExamplesFragment extends HeaderAndSubheaderFragment {
         this.setArguments(args);
     }
 
-     private void setupExamplesList(View view) {
+     private void setupExamplesList(View view, CustomViewPager pager) {
          Bundle bundle = this.getArguments();
          assert bundle != null;
 
          ArrayList<UnmetNeedAndSolution> unmetNeedAndSolutions = bundle.getParcelableArrayList(UNMET_NEEDS_AND_SOLUTIONS);
 
-         UnmetNeedsAndSolutionsAdapter adapter = new UnmetNeedsAndSolutionsAdapter(getContext(), unmetNeedAndSolutions);
+         UnmetNeedsAndSolutionsAdapter adapter = new UnmetNeedsAndSolutionsAdapter(getContext(), unmetNeedAndSolutions, pager);
          ((ListView) view.findViewById(R.id.examples_list)).setAdapter(adapter);
      }
 
