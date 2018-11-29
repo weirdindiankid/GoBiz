@@ -7,4 +7,6 @@
     <dimen name="vertical_space_between_questions">12dp</dimen>
     <dimen name="factoid_icon_dimen">40dp</dimen>
     <dimen name="quiz_option_spacing">4dp</dimen>
+    <dimen name="activity_margin">25dp</dimen>
+    <dimen name="dashboard_item_spacing">4dp</dimen>
 </resources>
