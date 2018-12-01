@@ -53,6 +53,7 @@
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"/>
 
+    <!--TODO: skip dialogue functionality-->
     <!--<TextView-->
         <!--android:id="@+id/skip_text"-->
         <!--android:layout_width="wrap_content"-->

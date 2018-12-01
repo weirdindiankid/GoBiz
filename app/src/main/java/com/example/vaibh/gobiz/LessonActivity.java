@@ -202,7 +202,7 @@ public class LessonActivity extends AppCompatActivity {
                 )
         )));
 
-        for (NextButtonFragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19)) {
+        for (Fragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17, f18, f19)) {
             if (f instanceof HeaderAndSubheaderFragment) {
                 ((HeaderAndSubheaderFragment) f).setLessonNumber(lessonNumber);
             }
@@ -250,7 +250,7 @@ public class LessonActivity extends AppCompatActivity {
         });
     }
 
-    public void setViewPager(int fragmentNumber) {
+    public void setViewPagerPage(int fragmentNumber) {
         fragmentContainer.setCurrentItem(fragmentNumber);
     }
 
@@ -259,6 +259,6 @@ public class LessonActivity extends AppCompatActivity {
             Toast.makeText(this, "No next page exists; index out of bounds", Toast.LENGTH_SHORT).show();
         }
 
-        setViewPager(fragmentContainer.getCurrentItem() + 1);
+        setViewPagerPage(fragmentContainer.getCurrentItem() + 1);
     }
 }

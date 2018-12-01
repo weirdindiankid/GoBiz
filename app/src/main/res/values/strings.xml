@@ -112,5 +112,12 @@
     <string name="lessons">Lessons</string>
     <string name="course_1_lesson_1_title">Find your business idea</string>
     <string name="lorem_ipsum_2_lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium, tortor ut commodo luctus, lacus orci suscipit massa, vitae maximus lorem lacus vel ex.</string>
+    <string name="results">Results</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="continue_">Continue</string>
+    <string name="passed_quiz_string">Well done!</string>
+    <string name="failed_quiz_string">You can do better!</string>
+    <string name="result">Result</string>
+    <string name="score">Score</string>
 
 </resources>

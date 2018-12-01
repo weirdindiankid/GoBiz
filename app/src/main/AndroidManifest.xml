@@ -39,7 +39,6 @@
         <activity android:name=".About"/>
         <activity
             android:name=".LessonActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="adjustPan">
 
         </activity>

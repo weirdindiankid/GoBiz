@@ -4,23 +4,30 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vaibh.gobiz.LessonActivity;
 import com.example.vaibh.gobiz.R;
+import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
 import com.example.vaibh.gobiz.adapters.QuizQuestionsAdapter;
 import com.example.vaibh.gobiz.pojos.QuizQuestion;
 import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class QuizFragment extends HeaderAndSubheaderFragment {
 
     private static final String CAPTION = "CAPTION";
     private static final String QUESTIONS = "QUESTIONS";
+    public static final String MESSAGE = "MESSAGE";
+    public static final String SCORE_STRING = "SCORE_STRING";
+    public static final String PASSED = "PASSED";
 
     @Nullable
     @Override
@@ -70,7 +77,29 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
                     if (numAnswered < questions.size()) {
                         Toast.makeText(getActivity(), getString(R.string.please_answer_all_questions), Toast.LENGTH_SHORT).show();
                     } else {
-                        Toast.makeText(getActivity(), String.format("%s/%s correct", String.valueOf(numCorrect), String.valueOf(questions.size())), Toast.LENGTH_SHORT).show();
+                        QuizResultsFragment f = new QuizResultsFragment();
+                        f.setLessonNumber(getLessonNumber());
+
+                        boolean passedQuiz = numCorrect >= questions.size() - 1;
+                        String message;
+                        if (passedQuiz) {
+                            message = getString(R.string.passed_quiz_string);
+                        } else {
+                            message = getString(R.string.failed_quiz_string);
+                        }
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString(MESSAGE, message);
+                        bundle.putString(SCORE_STRING, String.valueOf(numCorrect) + "/" + String.valueOf(questions.size()));
+                        bundle.putBoolean(PASSED, passedQuiz);
+
+                        f.setArguments(bundle);
+
+                        ViewPager viewPager = Objects.requireNonNull(getActivity()).findViewById(R.id.fragment_container);
+                        LessonContentPagerAdapter adapter = (LessonContentPagerAdapter) Objects.requireNonNull(viewPager.getAdapter());
+                        adapter.addFragment(f);
+                        viewPager.getAdapter().notifyDataSetChanged();
+                        ((LessonActivity) getActivity()).gotoNextPage();
                     }
                 }
             });
@@ -98,6 +127,10 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
 
         ArrayList<QuizQuestion> arr = bundle.getParcelableArrayList(QUESTIONS);
         assert arr != null;
+
+        for (QuizQuestion question : arr) {
+            question.setSelectedIndex(-1);
+        }
 
         QuizQuestionsAdapter adapter = new QuizQuestionsAdapter(context, arr);
         listView.setAdapter(adapter);
