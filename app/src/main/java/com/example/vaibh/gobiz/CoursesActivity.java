@@ -13,6 +13,7 @@ import com.example.vaibh.gobiz.adapters.CoursesAdapter;
 import com.example.vaibh.gobiz.pojos.Course;
 import com.example.vaibh.gobiz.pojos.Module;
 import com.example.vaibh.gobiz.utils.DatabaseConnection;
+import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
@@ -93,6 +94,8 @@ public class CoursesActivity extends AppCompatActivity {
                 CoursesAdapter coursesAdapter = new CoursesAdapter(getApplicationContext(), courseList);
                 ListView listView = findViewById(R.id.courseList);
                 listView.setAdapter(coursesAdapter);
+
+                ((ExpandableHeightListView)listView).setExpanded(true);
             }
 
             @Override

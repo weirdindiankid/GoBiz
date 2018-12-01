@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CoursesActivity"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    >
 
-    <ListView
-        android:id="@+id/courseList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:paddingBottom="12dp"
+        android:orientation="vertical"
+        tools:context=".CoursesActivity">
 
-    </ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/courses"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/course_label"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+
+        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+            android:id="@+id/courseList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"
+            android:dividerHeight="16dp"
+            >
+
+        </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
