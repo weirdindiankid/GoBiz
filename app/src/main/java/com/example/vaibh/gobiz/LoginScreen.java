@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 import com.example.vaibh.gobiz.pojos.User;
 import com.example.vaibh.gobiz.utils.DatabaseConnection;
 import com.facebook.AccessToken;
@@ -194,6 +195,7 @@ public class LoginScreen extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"EmailID or Password is empty.", Toast.LENGTH_LONG).show();
             return;
         }
+
         InternetConnectivity internet = new InternetConnectivity(this);
         if (!internet.isNetworkAvailable()) {
             Toast.makeText(getApplicationContext(), "Please check your Internet Connection", Toast.LENGTH_LONG).show();
@@ -206,6 +208,7 @@ public class LoginScreen extends AppCompatActivity {
                         dao.userAccepted = true;
                         currentUser = new User(dao);
                         Log.d("User Email : ", currentUser.getEmail());
+                        ModuleMapLock.getFromDatabase(currentUser.getObjectId());
                         Intent i = new Intent(getApplicationContext(), WelcomeActivity.class);
                         startActivity(i);
                     } else {
@@ -213,11 +216,9 @@ public class LoginScreen extends AppCompatActivity {
                         currentUser = null;
                         Toast.makeText(getApplicationContext(), "SignIn Error. " + task.getException(), Toast.LENGTH_LONG).show();
                     }
-                }
-            });
 
+            }});
         }
-
     }
 
 //    @Override
