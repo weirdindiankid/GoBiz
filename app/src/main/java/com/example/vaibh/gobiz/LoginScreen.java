@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 import com.example.vaibh.gobiz.pojos.User;
 import com.example.vaibh.gobiz.utils.DatabaseConnection;
 import com.facebook.AccessToken;
@@ -224,6 +225,7 @@ public class LoginScreen extends AppCompatActivity {
                     dao.userAccepted = true;
                     currentUser = new User(dao);
                     Log.d("User Email : ", currentUser.getEmail());
+                    ModuleMapLock.getFromDatabase(currentUser.getObjectId());
                     Intent i = new Intent(getApplicationContext(), WelcomeActivity.class);
                     startActivity(i);
                 }
