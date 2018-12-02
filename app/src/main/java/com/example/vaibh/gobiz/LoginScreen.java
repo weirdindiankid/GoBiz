@@ -37,18 +37,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.example.vaibh.gobiz.utils.InternetConnectivity;
 
 public class LoginScreen extends AppCompatActivity {
-    private Button btnSignUp;
-    private Button btnSignIn;
+    private Button btnSignUp, btnSignIn;
     private LoginButton loginButton;
     private TextView txtForgotPass;
     private EditText edtEmail, edtPassword;
-    private String strEmail, strPass, uid, fbName;
+    private String strEmail, strPass, uid, fbName, TAG = "FB_LOGIN";
     private DatabaseConnection dao;
     public User currentUser;
     private CallbackManager mCallbackManager;
-    private static String TAG = "FB_LOGIN";
     private FirebaseAuth mAuth;
 
     @Override
@@ -88,28 +87,7 @@ public class LoginScreen extends AppCompatActivity {
         loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-
                 getFbDetails(AccessToken.getCurrentAccessToken());
-                Log.d("facebook", fbName + "This is the name");
-//                GraphRequest request = GraphRequest.newMeRequest(
-//                        loginResult.getAccessToken(), new GraphRequest.GraphJSONObjectCallback() {
-//                            @Override
-//                            public void onCompleted(JSONObject object, GraphResponse response) {
-//                                try {
-//                                    fbName = object.getString("name");
-//                                    Log.d("facebook", fbName);
-//                                } catch (JSONException e) {
-//                                    e.printStackTrace();
-//                                }
-//                            }
-//                        }
-//
-//                );
-//                Bundle parameters = new Bundle();
-//                parameters.putString("fields", "id,name,link");
-//                request.setParameters(parameters);
-//                request.executeAndWait();
-//                request.executeAndWait();
                 Log.d(TAG, "facebook:onSuccess:" + loginResult + fbName);
                 handleFacebookAccessToken(loginResult.getAccessToken());
             }
@@ -218,27 +196,29 @@ public class LoginScreen extends AppCompatActivity {
             return;
         }
 
-        dao.mAuth.signInWithEmailAndPassword(strEmail,strPass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    dao.userAccepted = true;
-                    currentUser = new User(dao);
-                    Log.d("User Email : ", currentUser.getEmail());
-                    ModuleMapLock.getFromDatabase(currentUser.getObjectId());
-                    Intent i = new Intent(getApplicationContext(), WelcomeActivity.class);
-                    startActivity(i);
-                }
-                else{
-                    dao.userAccepted = false;
-                    currentUser = null;
-                    Toast.makeText(getApplicationContext(),"SignIn Error. "+ task.getException(),Toast.LENGTH_LONG).show();
-               }
-            }
-        });
+        InternetConnectivity internet = new InternetConnectivity(this);
+        if (!internet.isNetworkAvailable()) {
+            Toast.makeText(getApplicationContext(), "Please check your Internet Connection", Toast.LENGTH_LONG).show();
+        }
+        else {
+            dao.mAuth.signInWithEmailAndPassword(strEmail, strPass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (task.isSuccessful()) {
+                        dao.userAccepted = true;
+                        currentUser = new User(dao);
+                        Log.d("User Email : ", currentUser.getEmail());
+                        ModuleMapLock.getFromDatabase(currentUser.getObjectId());
+                        Intent i = new Intent(getApplicationContext(), WelcomeActivity.class);
+                        startActivity(i);
+                    } else {
+                        dao.userAccepted = false;
+                        currentUser = null;
+                        Toast.makeText(getApplicationContext(), "SignIn Error. " + task.getException(), Toast.LENGTH_LONG).show();
+                    }
 
-
-
+            }});
+        }
     }
 
 //    @Override
