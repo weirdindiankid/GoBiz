@@ -19,7 +19,7 @@ public class TheoryModelFragment extends HeaderAndSubheaderFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_theory_model, container, false);
 
-        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.theory_model_subheader));
+        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.label_theory_model));
         setupHeaders(view);
 
         setupNextButton(view);

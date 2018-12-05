@@ -16,7 +16,7 @@ public class ExerciseContinuedFragment extends ExerciseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercise_continued, container, false);
 
-        setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.exercise));
+        setHeaderStrings(getString(R.string.label_lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.label_exercise));
         setupHeaders(view);
 
         setupNextButton(view);

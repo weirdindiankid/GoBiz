@@ -26,7 +26,7 @@ public class FactoidsFragment extends HeaderAndSubheaderFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_factoids, container, false);
 
-        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.factoids));
+        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.label_factoids));
         setupHeaders(view);
 
         setupCaption(view);

@@ -49,7 +49,7 @@
                 android:textColor="#000"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:text="@string/conclusion"/>
+                tools:text="@string/label_conclusion"/>
 
             <TextView
                 android:id="@+id/body"

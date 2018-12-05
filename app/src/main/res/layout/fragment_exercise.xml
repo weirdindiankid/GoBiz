@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="@string/exercise"
+                    android:text="@string/label_exercise"
                     android:textColor="#000"
                     android:textSize="22sp"
                     android:textStyle="bold"/>

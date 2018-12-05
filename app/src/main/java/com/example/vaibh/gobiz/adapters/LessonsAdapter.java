@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.pojos.Module;
 import com.example.vaibh.gobiz.pojos.ModuleMapLock;
+import com.github.lzyzsd.circleprogress.DonutProgress;
 
 import java.util.ArrayList;
 
@@ -29,17 +30,23 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
             enabledModule = false;
         }
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_lesson_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_course_or_lesson_item, parent, false);
         }
 
-        TextView lessonTitle = convertView.findViewById(R.id.lesson_title);
-        TextView lessonDescription = convertView.findViewById(R.id.lesson_description);
+        TextView lessonTitle = convertView.findViewById(R.id.itemName);
+        TextView lessonDescription = convertView.findViewById(R.id.itemDescription);
+        DonutProgress donutProgress = convertView.findViewById(R.id.donutProgress);
+
 
         assert module != null;
         lessonTitle.setText(module.getTitle());
 
         // todo: add description field to module class
-        //lessonDescription.setText(module.get);
+        lessonDescription.setText(getContext().getString(R.string.lesson_description_placeholder));
+
+        // todo: persist and track content progress rather than setting a constant value every time
+        donutProgress.setProgress(30f);
+        donutProgress.setText((int) (donutProgress.getProgress()) + "%");
 
         return convertView;
     }

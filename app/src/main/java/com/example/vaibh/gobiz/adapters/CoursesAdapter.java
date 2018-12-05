@@ -28,13 +28,13 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
 
         // check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_course_item, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_course_or_lesson_item, parent, false);
         }
 
         // lookup view for data population
         DonutProgress donutProgress = convertView.findViewById(R.id.donutProgress);
-        TextView nameView = convertView.findViewById(R.id.courseName);
-        TextView descriptionView = convertView.findViewById(R.id.courseDescription);
+        TextView nameView = convertView.findViewById(R.id.itemName);
+        TextView descriptionView = convertView.findViewById(R.id.itemDescription);
 
         donutProgress.setDonut_progress(Integer.toString(75));
         donutProgress.setText(Integer.toString(75) + "%");

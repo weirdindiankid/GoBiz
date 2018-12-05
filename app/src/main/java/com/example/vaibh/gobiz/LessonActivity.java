@@ -133,10 +133,10 @@ public class LessonActivity extends AppCompatActivity {
         f13.setQuestion2String(getString(R.string.lesson_1_bringing_it_back_question_2));
 
         GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment f14 = new GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment();
-        f14.setHeaderStrings(getString(R.string.lesson) + " " + lessonNumber, getString(R.string.success_story));
+        f14.setHeaderStrings(getString(R.string.label_lesson) + " " + lessonNumber, getString(R.string.label_success_story));
         f14.setImageResource(R.drawable.interview);
         f14.setBody(getString(R.string.lesson_1_success_story));
-        f14.setCaptionString(getString(R.string.entrepreneurship_success_story));
+        f14.setCaptionString(getString(R.string.label_entrepreneurship_success_story));
 
         ReviewFragment f15 = new ReviewFragment();
         f15.setCaptionString(getString(R.string.lesson_1_review_caption));
@@ -154,7 +154,7 @@ public class LessonActivity extends AppCompatActivity {
         )));
 
         FactoidsFragment f16 = new FactoidsFragment();
-        f16.setCaptionString(getString(R.string.factoids));
+        f16.setCaptionString(getString(R.string.label_factoids));
         f16.setFactoidsList(new ArrayList<>(Arrays.asList(
                 new Factoid(getString(R.string.lesson_1_factoid_1), R.drawable.check),
                 new Factoid(getString(R.string.lesson_1_factoid_2), R.drawable.check),
@@ -164,13 +164,13 @@ public class LessonActivity extends AppCompatActivity {
         ConclusionFragment f17 = new ConclusionFragment();
         f17.setCaptionString("Conclusion");
         f17.setImageResource(R.drawable.student);
-        f17.setHeaderStrings(getString(R.string.lesson) + " " + lessonNumber, getString(R.string.conclusion));
+        f17.setHeaderStrings(getString(R.string.label_lesson) + " " + lessonNumber, getString(R.string.label_conclusion));
         f17.setBody(getString(R.string.lesson_1_conclusion));
 
         QuizIntroFragment f18 = new QuizIntroFragment();
 
         QuizFragment f19 = new QuizFragment();
-        f19.setCaptionString(getString(R.string.quiz));
+        f19.setCaptionString(getString(R.string.label_quiz));
         f19.setQuestionsList(new ArrayList<>(Arrays.asList(
                 new QuizQuestion(
                         getString(R.string.lesson_1_quiz_question_1),
