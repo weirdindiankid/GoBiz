@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class LessonsAdapter extends ArrayAdapter<Module> {
 
     private boolean enabledModule = true;
+
     public LessonsAdapter(Context context, ArrayList<Module> modules) {
         super(context, 0, modules);
     }
@@ -25,8 +26,8 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Module module = getItem(position);
-        Log.d("Module Value Lesson",ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString());
-        if(ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString().equals("false")){
+        Log.d("Module Value Lesson", ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString());
+        if (ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString().equals("false")) {
             enabledModule = false;
         }
         if (convertView == null) {
@@ -44,15 +45,24 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
         // todo: add description field to module class
         lessonDescription.setText(getContext().getString(R.string.lesson_description_placeholder));
 
-        // todo: persist and track content progress rather than setting a constant value every time
-        donutProgress.setProgress(30f);
-        donutProgress.setText((int) (donutProgress.getProgress()) + "%");
+        boolean isUnlocked = enabledModule;
+        if (!isUnlocked) {
+            donutProgress.setProgress(0f);
+            donutProgress.setText("");
+            convertView.findViewById(R.id.padlock).setVisibility(View.VISIBLE);
+        } else {
+            convertView.findViewById(R.id.padlock).setVisibility(View.INVISIBLE);
+
+            // todo: persist and track content progress rather than setting a constant value every time
+            donutProgress.setProgress(30f);
+            donutProgress.setText((int) (donutProgress.getProgress()) + "%");
+        }
 
         return convertView;
     }
 
     @Override
-    public boolean isEnabled(int position){
+    public boolean isEnabled(int position) {
         return enabledModule;
     }
 }

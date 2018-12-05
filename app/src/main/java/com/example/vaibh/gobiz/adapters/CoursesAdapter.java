@@ -36,11 +36,23 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         TextView nameView = convertView.findViewById(R.id.itemName);
         TextView descriptionView = convertView.findViewById(R.id.itemDescription);
 
-        donutProgress.setDonut_progress(Integer.toString(75));
-        donutProgress.setText(Integer.toString(75) + "%");
         nameView.setText(course.getCourseName());
         descriptionView.setText(course.getCourseDescription());
         Log.d("Adapter title", course.getCourseName());
+
+        // todo: add unlocked field to course class
+        boolean isUnlocked = false;
+        if (!isUnlocked) {
+            donutProgress.setProgress(0f);
+            donutProgress.setText("");
+            convertView.findViewById(R.id.padlock).setVisibility(View.VISIBLE);
+        } else {
+            convertView.findViewById(R.id.padlock).setVisibility(View.INVISIBLE);
+
+            // todo: persist and track content progress rather than setting a constant value every time
+            donutProgress.setProgress(75f);
+            donutProgress.setText(Integer.toString(75) + "%");
+        }
 
         return convertView;
     }

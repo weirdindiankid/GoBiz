@@ -10,14 +10,31 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
-    <com.github.lzyzsd.circleprogress.DonutProgress
-        android:id="@+id/donutProgress"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        custom:donut_circle_starting_degree="271"
-        custom:donut_progress="25.3"
-        />
+        >
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/donutProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:donut_circle_starting_degree="271"
+            custom:donut_progress="25.3"
+            />
+
+        <ImageView
+            android:id="@+id/padlock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/padlock"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
