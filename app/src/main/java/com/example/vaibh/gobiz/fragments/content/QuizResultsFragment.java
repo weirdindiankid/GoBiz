@@ -30,10 +30,10 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz_results, container, false);
-        setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.results));
+        setHeaderStrings(getString(R.string.label_lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.label_results));
         setupHeaders(view);
 
-        String caption = getString(R.string.score);
+        String caption = getString(R.string.label_score);
         ((TextView) view.findViewById(R.id.caption)).setText(caption);
 
         Bundle args = getArguments();
@@ -61,7 +61,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
 
         if (!quizPassed) {
             upperButton.setVisibility(View.INVISIBLE);
-            ((Button) lowerButton).setText(getString(R.string.review));
+            ((Button) lowerButton).setText(getString(R.string.label_review));
             lowerButton.setTag(REVIEW_TAG);
         } else {
             upperButton.setTag(REVIEW_TAG);

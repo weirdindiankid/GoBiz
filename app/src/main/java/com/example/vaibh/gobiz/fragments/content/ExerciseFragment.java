@@ -20,7 +20,7 @@ public class ExerciseFragment extends HeaderAndSubheaderFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercise, container, false);
 
-        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.exercise));
+        setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.label_exercise));
         setupHeaders(view);
 
         setupNextButton(view);

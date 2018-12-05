@@ -25,7 +25,7 @@ public class ExerciseBringingItBackFragment extends AnswersFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercise_bringing_it_back, container, false);
         setRoot(view);
-        setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.exercise));
+        setHeaderStrings(getString(R.string.label_lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.label_exercise));
         setupHeaders(view);
         setupInstructions(view);
         setupPrompt(view);

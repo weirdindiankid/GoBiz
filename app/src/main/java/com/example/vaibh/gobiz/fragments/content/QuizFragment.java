@@ -33,7 +33,7 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_quiz, container, false);
-        setHeaderStrings(getString(R.string.lesson) + " " + getLessonNumber(), getString(R.string.quiz));
+        setHeaderStrings(getString(R.string.label_lesson) + " " + getLessonNumber(), getString(R.string.label_quiz));
         setupHeaders(view);
         setupCaption(view);
         setupQuestions(view);
@@ -85,7 +85,7 @@ public class QuizFragment extends HeaderAndSubheaderFragment {
                         if (passedQuiz) {
                             message = getString(R.string.passed_quiz_string);
                         } else {
-                            message = getString(R.string.failed_quiz_string);
+                            message = getString(R.string.message_failed_quiz);
                         }
 
                         Bundle bundle = new Bundle();

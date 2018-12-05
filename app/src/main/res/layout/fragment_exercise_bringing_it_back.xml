@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="@string/bringing_it_back"
+                    android:text="@string/label_bringing_it_back"
                     android:textColor="#000"
                     android:textSize="22sp"
                     android:textStyle="bold"

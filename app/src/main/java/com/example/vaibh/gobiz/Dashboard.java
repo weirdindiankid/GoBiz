@@ -37,7 +37,7 @@ public class Dashboard extends AppCompatActivity {
 
         List<View> containers = Arrays.asList(coursesContainer, badgesContainer, networkContainer, profileContainer, settingsContainer, aboutContainer);
         List<Integer> drawablesIds = Arrays.asList(R.drawable.courses, R.drawable.badges, R.drawable.network, R.drawable.profile, R.drawable.settings, R.drawable.about);
-        List<String> labels = Arrays.asList("Courses", "Badges", "Network", "Profile", "Settings", "About");
+        List<String> labels = Arrays.asList(getString(R.string.label_courses), getString(R.string.label_badges), getString(R.string.label_network),getString(R.string.label_profile), getString(R.string.label_settings), getString(R.string.label_about));
 
         for (int i = 0; i < containers.size(); i++) {
             View container = containers.get(i);

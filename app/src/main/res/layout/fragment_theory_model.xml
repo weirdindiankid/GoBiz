@@ -58,7 +58,7 @@
                     android:textSize="22sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/theory_model"
+                    android:text="@string/label_theory_model"
                     android:textStyle="bold"
                     android:layout_marginBottom="15dp"
                     android:textColor="#000"/>

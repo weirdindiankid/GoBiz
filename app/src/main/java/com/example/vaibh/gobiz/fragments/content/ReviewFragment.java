@@ -30,7 +30,7 @@ public class ReviewFragment extends AnswersFragment {
         View view = inflater.inflate(R.layout.fragment_review, container, false);
         setRoot(view);
 
-        setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.review));
+        setHeaderStrings(getString(R.string.label_lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.label_review));
         setupHeaders(view);
         setupCaption(view);
         setupQuestions(view);

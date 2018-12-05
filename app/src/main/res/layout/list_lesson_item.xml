@@ -9,7 +9,7 @@
         android:id="@+id/lesson_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/course_1_lesson_1_title"
+        android:text="@string/lesson_1_title"
         android:textSize="16sp"
         />
 
