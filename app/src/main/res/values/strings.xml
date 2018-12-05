@@ -119,4 +119,5 @@
     <string name="sign_in_with">Sign in with</string>
     <string name="skip">Skip</string>
     <string name="txt_sign_up">Enter Your Details</string>
+    <string name="lesson_description_placeholder">Lesson description to be added. Quisque pretium, tortor ut commodo luctus.</string>
 </resources>

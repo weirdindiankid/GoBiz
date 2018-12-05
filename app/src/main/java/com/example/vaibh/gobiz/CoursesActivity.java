@@ -39,6 +39,7 @@ public class CoursesActivity extends AppCompatActivity {
         collectData();
 
         ListView courseList = findViewById(R.id.courseList);
+
         courseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -50,6 +51,9 @@ public class CoursesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ((ExpandableHeightListView)courseList).setExpanded(true);
+        courseList.setFocusable(false);
     }
 
     public void collectData() {
@@ -94,8 +98,6 @@ public class CoursesActivity extends AppCompatActivity {
                 CoursesAdapter coursesAdapter = new CoursesAdapter(getApplicationContext(), courseList);
                 ListView listView = findViewById(R.id.courseList);
                 listView.setAdapter(coursesAdapter);
-
-                ((ExpandableHeightListView)listView).setExpanded(true);
             }
 
             @Override

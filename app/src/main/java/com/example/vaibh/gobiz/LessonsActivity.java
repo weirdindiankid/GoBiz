@@ -5,11 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.example.vaibh.gobiz.adapters.LessonsAdapter;
 import com.example.vaibh.gobiz.pojos.Course;
 import com.example.vaibh.gobiz.pojos.Module;
+import com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +35,9 @@ public class LessonsActivity extends AppCompatActivity {
         courseModuleMap = (HashMap<Course, List<Module>>) intent.getSerializableExtra(COURSE_MODULE_MAP);
 
         LessonsAdapter adapter = new LessonsAdapter(this, modules);
-        ListView lessonsList = findViewById(R.id.lessons_list);
+        ExpandableHeightListView lessonsList = findViewById(R.id.lessons_list);
+        lessonsList.setExpanded(true);
+        lessonsList.setFocusable(false);
         lessonsList.setAdapter(adapter);
 
         lessonsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

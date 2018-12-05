@@ -29,7 +29,7 @@
         >
 
         <TextView
-            android:id="@+id/courseName"
+            android:id="@+id/itemName"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="3"
@@ -39,7 +39,7 @@
             tools:text="Course 1: Introduction"/>
 
         <TextView
-            android:id="@+id/courseDescription"
+            android:id="@+id/itemDescription"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="5"
