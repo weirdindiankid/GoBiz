@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class ReviewFragment extends AnswersFragment {
         setRoot(view);
 
         setHeaderStrings(getString(R.string.lesson) + " " + String.valueOf(getLessonNumber()), getString(R.string.review));
+        Log.d("Review LessonNumber:",String.valueOf(getLessonNumber()));
         setupHeaders(view);
         setupCaption(view);
         setupQuestions(view);
