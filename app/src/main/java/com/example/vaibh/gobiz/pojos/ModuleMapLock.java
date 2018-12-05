@@ -3,6 +3,7 @@ package com.example.vaibh.gobiz.pojos;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,7 +18,7 @@ import static java.nio.file.Paths.get;
 
 public final class ModuleMapLock {
     public static Map<String, Object> moduleMap = new HashMap<>();
-
+    public static String userId ;
     private ModuleMapLock(){
 
     }
@@ -31,7 +32,8 @@ public final class ModuleMapLock {
         moduleMap.put("Mod6", false);
     }
     public static void getFromDatabase(String uId){
-        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(uId);
+        userId = uId;
+        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -57,5 +59,20 @@ public final class ModuleMapLock {
             moduleMap.remove(moduleId);
             moduleMap.put(moduleId, true);
         }
+        Log.d("ModuleMap Lock" , moduleMap.get(moduleId).toString());
+        Log.d("ModuleMap Lock id" , moduleId);
+        final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
+        rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    rootRef.child("ModulesUnlocked").setValue(ModuleMapLock.moduleMap);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 }

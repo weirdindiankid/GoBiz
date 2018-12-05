@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
 import com.example.vaibh.gobiz.customviews.CustomViewPager;
+import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 
 import java.util.Objects;
 
@@ -23,7 +24,8 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
 
     private static final String REVIEW_TAG = "REVIEW_TAG";
     private static final String CONTINUE_TAG = "CONTINUE_TAG";
-
+    private static final String Module = "Mod";
+    private static String nextModule;
     CustomViewPager viewPager;
 
     @Nullable
@@ -66,6 +68,8 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
         } else {
             upperButton.setTag(REVIEW_TAG);
             lowerButton.setTag(CONTINUE_TAG);
+            nextModule = Module + String.valueOf(getLessonNumber()+1);
+            ModuleMapLock.editModule(nextModule);
         }
 
         upperButton.setOnClickListener(this);
