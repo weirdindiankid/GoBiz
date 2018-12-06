@@ -126,4 +126,13 @@
     <string name="log_in_with_facebook">Log in with Facebook</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="gobiz_logo">Gobiz logo</string>
+    <string name="about_gobiz">GoBiz has been developed by the International Labour Organization (ILO), with support of the Boston University Spark! programme as well as students from Liger Academy in Cambodia, as an application to help young people access a simple means of learning more about the opportunities for and steps to starting their own business.  While entrepreneurship and self-employment may not be the path chosen by all users, the knowledge presented here should help anyone in their future employment to understand the basics of business.
+
+        \n \nGoBiz leads users through a series of lessons, making up five course areas, framing for them topics they will want to consider to ensure business success.  As each course is completed, users receive an electronic badge, indicating their having committed to completing the lessons covered.  For those completing all five courses, an electronic certificate of course completion will be issued.</string>
+    <string name="about_lio">The International Labour Organization (www.ilo.org), celebrating its 100th anniversary in 2019, is the United Nations’ first specialized agency.  The Organization brings together governments, employers and workers of 187 member States  to help create jobs and opportunities for workers of all ages, while setting labour standards, developing policies and devising programmes promoting decent work for all women and men.</string>
+    <string name="about_gobiz_header">About GoBiz</string>
+    <string name="about_the_ilo_header">About the ILO</string>
+    <string name="about_us_header">About Us</string>
+
+
 </resources>
