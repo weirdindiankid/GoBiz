@@ -1,91 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
     tools:context=".LoginScreen">
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btnfbLogin"
-        android:layout_width="179dp"
-        android:layout_height="57dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="181dp"
-        android:layout_marginEnd="108dp"
-        android:contentDescription="@string/facebook_login_image_button"
-        app:srcCompat="@drawable/img_facebook_login" />
-
-    <TextView
-        android:id="@+id/txtSignin"
-        android:layout_width="168dp"
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="133dp"
-        android:text="@string/sign_in_with"
-        android:textSize="24sp" />
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/gobiz_logo"
+        android:src="@drawable/logo"/>
 
-    <EditText
-        android:id="@+id/edtEmailSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edtPassword"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="85dp"
-        android:layout_marginBottom="215dp"
-        android:ems="10"
-        android:hint="@string/email_id"
-        android:importantForAutofill="no"
-        android:inputType="textEmailAddress" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        >
 
-    <EditText
-        android:id="@+id/edtPasswordSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edtEmailSignIn"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="162dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/edtEmailSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/email_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:textSize="16sp"
+            tools:ignore="Autofill"/>
 
-    <TextView
-        android:id="@+id/txtForgotDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edtEmailSignUp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="170dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="135dp"
-        android:text="@string/forgot_your_details" />
 
-    <Button
-        android:id="@+id/btnSignIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/txtSignin"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="67dp"
-        android:text="@string/sign_in" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
 
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnSignIn"
-        android:layout_alignEnd="@+id/btnSignIn"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="-68dp"
-        android:text="Sign Up" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/edtPasswordSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            tools:ignore="Autofill"/>
+
+        <TextView
+            android:id="@+id/txtForgotDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            android:text="@string/forgot_password"
+            android:onClick="ResetPassword"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"/>
+
+        <com.marozzi.roundbutton.RoundButton
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_button_height"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/login"
+            android:textStyle="bold"
+            app:rb_background_color="#e95e1d"
+            app:rb_background_color_pressed="#e95e1d"
+            app:rb_corner_radius="4dp"
+            app:rb_text_color="#fff"
+            app:rb_text_color_pressed="#fff"
+            />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"/>
+
+        <View
+            android:layout_width="230dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#777"
+            />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"/>
+
+        <com.marozzi.roundbutton.RoundButton
+            android:id="@+id/fake_fb_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_button_height"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/log_in_with_facebook"
+            app:rb_background_color="#3B5998"
+            app:rb_background_color_pressed="#3B5998"
+            app:rb_corner_radius="4dp"
+            app:rb_text_color="#fff"
+            app:rb_text_color_pressed="#fff"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="9dp"/>
+
+        <com.marozzi.roundbutton.RoundButton
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_button_height"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/sign_up"
+            android:textColor="#fff"
+            app:rb_background_color="#1db0e9"
+            app:rb_background_color_pressed="#1db0e9"
+            app:rb_corner_radius="4dp"
+            app:rb_text_color="#fff"
+            app:rb_text_color_pressed="#fff"/>
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnfbLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/facebook_login_image_button"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</LinearLayout>

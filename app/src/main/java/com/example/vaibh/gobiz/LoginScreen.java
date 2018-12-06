@@ -1,28 +1,25 @@
 package com.example.vaibh.gobiz;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 import com.example.vaibh.gobiz.pojos.User;
 import com.example.vaibh.gobiz.utils.DatabaseConnection;
+import com.example.vaibh.gobiz.utils.InternetConnectivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -35,9 +32,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.json.JSONException;
 import org.json.JSONObject;
-import com.example.vaibh.gobiz.utils.InternetConnectivity;
 
 public class LoginScreen extends AppCompatActivity {
     private Button btnSignUp, btnSignIn;
@@ -67,7 +62,7 @@ public class LoginScreen extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),SignUpActivity.class);
+                Intent i = new Intent(getApplicationContext(), SignUpActivity.class);
                 startActivity(i);
             }
         });
@@ -77,7 +72,7 @@ public class LoginScreen extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    VerifyIDPass();
+                VerifyIDPass();
             }
         });
 
@@ -106,6 +101,12 @@ public class LoginScreen extends AppCompatActivity {
         });
 // ...
 
+        findViewById(R.id.fake_fb_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginButton.performClick();
+            }
+        });
     }
 
     private void getFbDetails(final AccessToken accessToken) {
@@ -166,14 +167,14 @@ public class LoginScreen extends AppCompatActivity {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null){
+        if (currentUser != null) {
             Intent i = new Intent(getApplicationContext(), WelcomeActivity.class);
             startActivity(i);
         }
 
     }
 
-    public void ResetPassword(View v){
+    public void ResetPassword(View v) {
         Intent i = new Intent(getApplicationContext(), PasswordReset.class);
         startActivity(i);
     }
@@ -187,20 +188,19 @@ public class LoginScreen extends AppCompatActivity {
     }
 
 
-    public void VerifyIDPass(){
+    public void VerifyIDPass() {
         strEmail = edtEmail.getText().toString();
         strPass = edtPassword.getText().toString();
 
-        if(strEmail.isEmpty() || strPass.isEmpty()){
-            Toast.makeText(getApplicationContext(),"EmailID or Password is empty.", Toast.LENGTH_LONG).show();
+        if (strEmail.isEmpty() || strPass.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "EmailID or Password is empty.", Toast.LENGTH_LONG).show();
             return;
         }
 
         InternetConnectivity internet = new InternetConnectivity(this);
         if (!internet.isNetworkAvailable()) {
             Toast.makeText(getApplicationContext(), "Please check your Internet Connection", Toast.LENGTH_LONG).show();
-        }
-        else {
+        } else {
             dao.mAuth.signInWithEmailAndPassword(strEmail, strPass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -217,7 +217,8 @@ public class LoginScreen extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "SignIn Error. " + task.getException(), Toast.LENGTH_LONG).show();
                     }
 
-            }});
+                }
+            });
         }
     }
 

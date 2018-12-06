@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="173dp"
-            android:background="@drawable/black_border"
+            android:background="@drawable/gray_border"
             android:fontFamily="@font/sign_painter_house_slant"
             android:gravity="center_vertical"
             android:lineSpacingMultiplier="1.2"

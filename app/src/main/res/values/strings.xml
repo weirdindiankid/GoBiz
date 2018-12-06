@@ -5,7 +5,7 @@
     <string name="continued">(continued)</string>
     <string name="course_item_title">Course %1$s: %2$s</string>
     <string name="edit_text_hint">|</string>
-    <string name="email_id">Email Id</string>
+    <string name="email_address">E-mail address</string>
     <string name="example_slide_to_reveal_instruction"><![CDATA[Slide to reveal examples of unmet needs & solutions]]></string>
     <string name="facebook_app_id">2038429596241610</string>
     <string name="facebook_login_image_button">Facebook Login - Image Button</string>
@@ -120,4 +120,10 @@
     <string name="skip">Skip</string>
     <string name="txt_sign_up">Enter Your Details</string>
     <string name="lesson_description_placeholder">Lesson description to be added. Quisque pretium, tortor ut commodo luctus.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Log in</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="gobiz_logo">Gobiz logo</string>
 </resources>
