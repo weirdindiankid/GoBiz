@@ -8,27 +8,26 @@ import java.util.List;
 
 public class Course implements Parcelable {
 
-    String courseName ;
-    List<String> courseModules =  new ArrayList<String>();
-    String courseDescription ;
+    String courseName;
+    List<String> courseModules = new ArrayList<String>();
+    String courseDescription;
 
     /**
-     *
      * @param name
      * @param modules
      */
 
-    public Course(String name, List<String> modules){
+    public Course(String name, List<String> modules) {
+        this(name, modules, "Description to be added later as we get more data.");
+    }
 
+    public Course(String name, List<String> modules, String courseDescription) {
         courseName = name;
         courseModules = modules;
-        courseDescription = "Description to be added later as we get more data";
-
-
+        this.courseDescription = courseDescription;
     }
 
     /**
-     *
      * @return courseModules
      */
     public List<String> getCourseModules() {
@@ -36,7 +35,6 @@ public class Course implements Parcelable {
     }
 
     /**
-     *
      * @return courseName
      */
     public String getCourseName() {
@@ -44,7 +42,6 @@ public class Course implements Parcelable {
     }
 
     /**
-     *
      * @return courseDescription
      */
     public String getCourseDescription() {

@@ -20,7 +20,6 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         super(context, 0, courses);
     }
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Course course = getItem(position);
@@ -40,8 +39,8 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         descriptionView.setText(course.getCourseDescription());
         Log.d("Adapter title", course.getCourseName());
 
-        // todo: add unlocked field to course class
-        boolean isUnlocked = false;
+        // for now, only first course is unlocked
+        boolean isUnlocked = position == 0;
         if (!isUnlocked) {
             donutProgress.setProgress(0f);
             donutProgress.setText("");

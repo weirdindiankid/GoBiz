@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.CoursesAdapter;
 import com.example.vaibh.gobiz.pojos.Course;
@@ -20,6 +21,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,16 +45,23 @@ public class CoursesActivity extends AppCompatActivity {
         courseList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), LessonsActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putParcelableArrayList("MODULES", modules);
-                bundle.putSerializable(COURSE_MODULE_MAP, courseModuleMap);
-                intent.putExtras(bundle);
-                startActivity(intent);
+
+                // only first course is functioning for now
+                if (i == 0) {
+                    Intent intent = new Intent(getApplicationContext(), LessonsActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putParcelableArrayList("MODULES", modules);
+                    bundle.putSerializable(COURSE_MODULE_MAP, courseModuleMap);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(CoursesActivity.this, "Content Locked", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
-        ((ExpandableHeightListView)courseList).setExpanded(true);
+        ((ExpandableHeightListView) courseList).setExpanded(true);
         courseList.setFocusable(false);
     }
 
@@ -94,6 +103,10 @@ public class CoursesActivity extends AppCompatActivity {
                 Set<Course> courses = courseModuleMap.keySet();
                 ArrayList<Course> courseList = new ArrayList<>();
                 courseList.addAll(courses);
+
+                // REMOVE ME once more courses are added to the database
+                addMockCourses(courseList);
+
                 Log.d("Before Adapter call :", Integer.toString(courses.size()));
                 CoursesAdapter coursesAdapter = new CoursesAdapter(getApplicationContext(), courseList);
                 ListView listView = findViewById(R.id.courseList);
@@ -105,5 +118,15 @@ public class CoursesActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void addMockCourses(ArrayList<Course> courses) {
+        courses.addAll(Arrays.asList(
+                new Course("Marketing", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
+                new Course("Management", null, "Phasellus semper scelerisque erat sit amet cursus."),
+                new Course("Financing", null, "Suspendisse scelerisque facilisis velit, nec ultricies nunc hendrerit quis."),
+                new Course("Taking Action", null, "Duis pulvinar vitae elit quis consequat. Fusce pulvinar, lectus nec.")
+                )
+        );
     }
 }
