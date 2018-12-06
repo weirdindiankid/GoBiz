@@ -13,6 +13,7 @@ import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.adapters.LessonContentPagerAdapter;
 import com.example.vaibh.gobiz.customviews.CustomViewPager;
 import com.example.vaibh.gobiz.pojos.ModuleMapLock;
+import com.example.vaibh.gobiz.pojos.ModuleScore;
 
 import java.util.Objects;
 
@@ -26,6 +27,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
     private static final String CONTINUE_TAG = "CONTINUE_TAG";
     private static final String Module = "Mod";
     private static String nextModule;
+    private static Float UpdateScore;
     CustomViewPager viewPager;
 
     @Nullable
@@ -42,6 +44,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
         assert args != null;
 
         String score = args.getString(SCORE_STRING);
+//        UpdateScore = Float.parseFloat(score);
         String message = args.getString(MESSAGE);
         boolean passedQuiz = args.getBoolean(PASSED);
 
@@ -70,6 +73,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
             lowerButton.setTag(CONTINUE_TAG);
             nextModule = Module + String.valueOf(getLessonNumber()+1);
             ModuleMapLock.editModule(nextModule);
+//            ModuleScore.updateScore(Module, UpdateScore );
         }
 
         upperButton.setOnClickListener(this);
