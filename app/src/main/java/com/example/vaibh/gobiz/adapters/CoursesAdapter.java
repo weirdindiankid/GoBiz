@@ -1,6 +1,7 @@
 package com.example.vaibh.gobiz.adapters;
 
 import android.content.Context;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,7 @@ public class CoursesAdapter extends ArrayAdapter<Course> {
         TextView nameView = convertView.findViewById(R.id.itemName);
         TextView descriptionView = convertView.findViewById(R.id.itemDescription);
 
-        nameView.setText(course.getCourseName());
+        nameView.setText(Html.fromHtml(String.format("<b>Course %d:</b> %s", position + 1, course.getCourseName())));
         descriptionView.setText(course.getCourseDescription());
         Log.d("Adapter title", course.getCourseName());
 
