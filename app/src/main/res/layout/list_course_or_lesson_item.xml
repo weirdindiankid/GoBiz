@@ -22,6 +22,8 @@
             android:layout_height="wrap_content"
             custom:donut_circle_starting_degree="271"
             custom:donut_progress="25.3"
+            custom:donut_text_color="@color/donut_progress_stroke_color"
+            custom:donut_finished_color="@color/donut_progress_stroke_color"
             />
 
         <ImageView
@@ -31,7 +33,7 @@
             android:layout_gravity="center"
             android:src="@drawable/padlock"
             android:visibility="invisible"
-            tools:visibility="visible"/>
+            tools:visibility="invisible"/>
 
     </FrameLayout>
 
