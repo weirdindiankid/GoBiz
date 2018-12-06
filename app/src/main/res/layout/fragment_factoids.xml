@@ -30,7 +30,7 @@
                 android:layout_height="@dimen/_40sdp"
                 />
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
                 android:src="@drawable/factoids"

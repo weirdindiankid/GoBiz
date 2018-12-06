@@ -25,12 +25,11 @@
         android:paddingRight="@dimen/lesson_fragment_layout_padding"
         >
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:scaleType="fitCenter"
             android:src="@drawable/question"
             tools:layout_editor_absoluteY="26dp"/>
 
@@ -90,7 +89,7 @@
                     android:id="@+id/swipeable_overlay_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#20ccf5"/>
+                    android:background="@color/swipe_to_reveal_blue"/>
             </FrameLayout>
         </com.chauthai.swipereveallayout.SwipeRevealLayout>
 
@@ -129,7 +128,7 @@
                     android:id="@+id/swipeable_overlay_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#20ccf5"/>
+                    android:background="@color/swipe_to_reveal_blue"/>
             </FrameLayout>
         </com.chauthai.swipereveallayout.SwipeRevealLayout>
 
@@ -168,7 +167,7 @@
                     android:id="@+id/swipeable_overlay_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#20ccf5"/>
+                    android:background="@color/swipe_to_reveal_blue"/>
             </FrameLayout>
         </com.chauthai.swipereveallayout.SwipeRevealLayout>
 

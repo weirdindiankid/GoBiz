@@ -25,12 +25,11 @@
         android:paddingRight="@dimen/lesson_fragment_layout_padding"
         >
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2.4"
-            android:scaleType="fitCenter"
             android:src="@drawable/exercise"
             tools:layout_editor_absoluteY="26dp"/>
 
