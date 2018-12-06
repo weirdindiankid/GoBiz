@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/brain_cog"
+            android:src="@drawable/theory_model"
             tools:layout_editor_absoluteY="26dp"/>
 
         <ScrollView

@@ -54,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6"
-            android:src="@drawable/target"/>
+            android:src="@drawable/lesson_2_opener"/>
     </LinearLayout>
 
 

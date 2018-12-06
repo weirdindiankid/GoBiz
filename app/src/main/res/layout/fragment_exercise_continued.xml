@@ -31,7 +31,7 @@
             android:layout_height="0dp"
             android:layout_weight="2.4"
             android:scaleType="fitCenter"
-            android:src="@drawable/notebook_pen"
+            android:src="@drawable/exercise"
             tools:layout_editor_absoluteY="26dp"/>
 
         <ScrollView

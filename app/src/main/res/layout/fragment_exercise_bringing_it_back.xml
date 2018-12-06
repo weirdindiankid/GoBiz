@@ -30,7 +30,7 @@
             android:paddingStart="0dp"
             android:paddingEnd="@dimen/lesson_fragment_layout_padding"
             android:scaleType="fitEnd"
-            android:src="@drawable/notebook_pen"
+            android:src="@drawable/exercise"
             />
     </RelativeLayout>
 
