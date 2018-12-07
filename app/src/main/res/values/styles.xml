@@ -21,4 +21,8 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="AppTheme.NoActionBar2">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>
