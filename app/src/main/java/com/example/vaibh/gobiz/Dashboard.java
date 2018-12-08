@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import com.example.vaibh.gobiz.pojos.Course;
 import com.example.vaibh.gobiz.pojos.Module;
+import com.example.vaibh.gobiz.pojos.ModuleMapLock;
+import com.example.vaibh.gobiz.pojos.ModuleScore;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -23,7 +26,8 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
+        ModuleMapLock.getFromDatabase(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        ModuleScore.getFromDatabase(FirebaseAuth.getInstance().getCurrentUser().getUid());
         setupDashboardItems();
     }
 
