@@ -69,6 +69,7 @@
                 android:linksClickable="true"
                 android:textColor="#000"
                 android:textSize="16sp"
+                android:textColorLink="@color/gobiz_blue"
                 tools:text="@string/lesson_2_success_story_source"/>
 
         </LinearLayout>
