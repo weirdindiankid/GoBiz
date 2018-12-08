@@ -44,12 +44,12 @@ public class LessonsActivity extends AppCompatActivity {
         LessonsAdapter adapter = new LessonsAdapter(this, modules);
 
         // mocked for testing lesson 2
-        modules.add(0, new Module("Mod2", getString(R.string.lesson_2_course_name)));
+        modules.add(0, new Module("Mod1", getString(R.string.lesson_2_course_name)));
 
         // mocked lesosns for demoing
-        modules.add(new Module("Mod2", getString(R.string.lesson_3_course_name)));
-        modules.add(new Module("Mod2", getString(R.string.lesson_4_course_name)));
-        modules.add(new Module("Mod2", getString(R.string.lesson_5_course_name)));
+        modules.add(new Module("Mod1", getString(R.string.lesson_3_course_name)));
+        modules.add(new Module("Mod1", getString(R.string.lesson_4_course_name)));
+        modules.add(new Module("Mod1", getString(R.string.lesson_5_course_name)));
 
         ExpandableHeightListView lessonsList = findViewById(R.id.lessons_list);
         lessonsList.setExpanded(true);
