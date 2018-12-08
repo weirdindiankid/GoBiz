@@ -12,6 +12,7 @@ import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.pojos.Module;
 import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 import com.github.lzyzsd.circleprogress.DonutProgress;
+import com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor;
 
 import java.util.ArrayList;
 
@@ -26,7 +27,8 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Module module = getItem(position);
-        Log.d("Module Value Lesson", ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString());
+
+        Log.d("Module Value Lesson",Boolean.toString(ModuleMapLock.moduleMap.containsKey(module.getModuleNumber())));
         if (ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString().equals("false")) {
             enabledModule = false;
         }

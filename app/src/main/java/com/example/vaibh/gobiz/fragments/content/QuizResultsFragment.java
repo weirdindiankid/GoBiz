@@ -3,6 +3,7 @@ package com.example.vaibh.gobiz.fragments.content;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +45,8 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
         assert args != null;
 
         String score = args.getString(SCORE_STRING);
-//        UpdateScore = Float.parseFloat(score);
+        Log.d("Score",SCORE_STRING);
+        //UpdateScore = Float.parseFloat(score);
         String message = args.getString(MESSAGE);
         boolean passedQuiz = args.getBoolean(PASSED);
 
@@ -71,9 +73,10 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
         } else {
             upperButton.setTag(REVIEW_TAG);
             lowerButton.setTag(CONTINUE_TAG);
+            Log.d("Quiz Result",Boolean.toString(ModuleMapLock.moduleMap.containsKey("Mod1")));
             nextModule = Module + String.valueOf(getLessonNumber()+1);
             ModuleMapLock.editModule(nextModule);
-//            ModuleScore.updateScore(Module, UpdateScore );
+            ModuleScore.updateScore(Module + String.valueOf(getLessonNumber()), UpdateScore );
         }
 
         upperButton.setOnClickListener(this);
