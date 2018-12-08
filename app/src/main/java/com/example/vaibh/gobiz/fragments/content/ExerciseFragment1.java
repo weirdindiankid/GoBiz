@@ -10,19 +10,20 @@ import android.widget.TextView;
 
 import com.example.vaibh.gobiz.R;
 
-public class ExerciseFragment1 extends HeaderAndSubheaderFragment {
+public class ExerciseFragment1 extends AnswersFragment {
 
     public static final String INSTRUCTIONS = "INSTRUCTIONS";
     public static final String PROMPT_1 = "PROMPT_1";
     public static final String PROMPT_2 = "PROMPT_2";
     public static final String FOLLOWUP = "FOLLOWUP";
+    public static final String TAG = "TAG";
 
 
-    // todo: persist user entry
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercise_1, container, false);
+        setRoot(view);
 
         setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.label_exercise));
         setupHeaders(view);
@@ -30,6 +31,11 @@ public class ExerciseFragment1 extends HeaderAndSubheaderFragment {
 
         Bundle args = getArguments();
         assert args != null;
+
+        if (args.containsKey(TAG)) {
+            String tag = args.getString(TAG);
+            setTag(tag);
+        }
 
         String instructions = args.getString(INSTRUCTIONS);
         String prompt1 = args.getString(PROMPT_1);

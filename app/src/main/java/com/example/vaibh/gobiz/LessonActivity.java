@@ -147,6 +147,7 @@ public class LessonActivity extends AppCompatActivity {
             f10.setStringExamples(examples);
 
             ExerciseFragment1 f11 = new ExerciseFragment1();
+            f11.setTag("11");       // settings different tags for both f11 and f13 since we don't want those answers to be synced
             bundle = new Bundle();
             bundle.putString(ExerciseFragment1.INSTRUCTIONS, getString(R.string.lesson_2_exercise_instructions));
             bundle.putString(ExerciseFragment1.PROMPT_1, getString(R.string.label_pros));
@@ -162,6 +163,7 @@ public class LessonActivity extends AppCompatActivity {
             f12.setSourceLink(getString(R.string.lesson_2_success_story_source));
 
             ReviewFragment1 f13 = new ReviewFragment1();
+            f13.setTag("13");
             f13.setCaptionString(getString(R.string.lesson_2_review_caption));
             f13.setEndNoteString(getString(R.string.lesson_2_review_followup));
             f13.setQuestion1String(getString(R.string.lesson_2_review_prompt_1));
@@ -226,7 +228,7 @@ public class LessonActivity extends AppCompatActivity {
                                     getString(R.string.lesson_2_quiz_question_5_answer_3)
                             )),
                             0)
-                    )
+            )
             ));
 
             for (Fragment f : Arrays.asList(f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15, f16, f17)) {
