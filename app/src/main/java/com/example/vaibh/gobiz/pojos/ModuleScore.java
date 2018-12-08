@@ -36,7 +36,7 @@ public class ModuleScore {
                 if(dataSnapshot.hasChild("ModuleScore")){
                     map = (Map<String, Object>) dataSnapshot.child("ModuleScore").getValue();
                 }else{
-                    ModuleMapLock.signupModule();
+                    ModuleScore.setMap();
                     rootRef.child("ModuleScore").setValue(ModuleScore.map);
                 }
             }
@@ -49,11 +49,13 @@ public class ModuleScore {
     }
 
     public static void updateScore(String moduleId, float score){
+
+        Log.d("SCORE_UPDATED", Float.toString(score));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            map.replace(moduleId,true);
+            map.replace(moduleId,score);
         }else{
             map.remove(moduleId);
-            map.put(moduleId, true);
+            map.put(moduleId, score);
         }
 //        Log.d("ModuleMap Lock" , map.get(moduleId).toString());
 //        Log.d("ModuleMap Lock id" , moduleId);
