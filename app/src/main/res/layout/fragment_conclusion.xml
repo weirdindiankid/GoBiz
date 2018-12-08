@@ -60,6 +60,18 @@
                 android:textSize="16sp"
                 tools:text="@string/lesson_1_story_intro"/>
 
+            <TextView
+                android:id="@+id/src_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:lineSpacingMultiplier="1.1"
+                android:linksClickable="true"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textColorLink="@color/gobiz_blue"
+                tools:text="@string/lesson_2_success_story_source"/>
+
         </LinearLayout>
 
         <ImageView

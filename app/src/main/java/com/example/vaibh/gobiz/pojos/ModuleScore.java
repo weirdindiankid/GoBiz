@@ -57,17 +57,13 @@ public class ModuleScore {
             map.remove(moduleId);
             map.put(moduleId, score);
         }
-//        Log.d("ModuleMap Lock" , map.get(moduleId).toString());
-//        Log.d("ModuleMap Lock id" , moduleId);
         final DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
         rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 rootRef.child("ModuleScore").setValue(ModuleScore.map);
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 

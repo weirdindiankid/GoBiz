@@ -49,6 +49,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
 
         String score = args.getString(SCORE_STRING);
 
+
         ScoreNumDeno = score.split("/");
         if (ScoreNumDeno[1].equals('0')){
             UpdateScore = 0.0f;
@@ -57,6 +58,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
             UpdateScore = Float.parseFloat(ScoreNumDeno[0]) / Float.parseFloat(ScoreNumDeno[1]);
         }
         Log.d(TAG_SCORE, UpdateScore.toString());
+
 
         String message = args.getString(MESSAGE);
         boolean passedQuiz = args.getBoolean(PASSED);
@@ -83,6 +85,7 @@ public class QuizResultsFragment extends HeaderAndSubheaderFragment implements V
         } else {
             upperButton.setTag(REVIEW_TAG);
             lowerButton.setTag(CONTINUE_TAG);
+            Log.d("Quiz Result",Boolean.toString(ModuleMapLock.moduleMap.containsKey("Mod1")));
             nextModule = Module + String.valueOf(getLessonNumber()+1);
             ModuleMapLock.editModule(nextModule);
         }

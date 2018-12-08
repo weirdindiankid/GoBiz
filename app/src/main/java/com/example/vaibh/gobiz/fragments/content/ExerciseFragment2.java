@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.example.vaibh.gobiz.R;
 
-public class ExerciseFragment extends HeaderAndSubheaderFragment {
+public class ExerciseFragment2 extends HeaderAndSubheaderFragment {
 
     private static final String INSTRUCTIONS = "INSTRUCTIONS";
     private static final String EXERCISE = "EXERCISE";
@@ -18,7 +18,7 @@ public class ExerciseFragment extends HeaderAndSubheaderFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exercise, container, false);
+        View view = inflater.inflate(R.layout.fragment_exercise_2, container, false);
 
         setHeaderStrings("Lesson " + String.valueOf(getLessonNumber()), getString(R.string.label_exercise));
         setupHeaders(view);

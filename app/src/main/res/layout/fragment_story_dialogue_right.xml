@@ -49,11 +49,11 @@
             android:gravity="center_vertical"
             android:lineSpacingMultiplier="1.2"
             android:padding="10dp"
-            android:text="@string/lesson_1_dialogue_1"
             android:textColor="#000"
             android:textSize="@dimen/dialogue_text_size"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/dialogue_image"/>
+            app:layout_constraintTop_toTopOf="@+id/dialogue_image"
+            tools:text="@string/lesson_1_dialogue_1"/>
 
     </android.support.constraint.ConstraintLayout>
 

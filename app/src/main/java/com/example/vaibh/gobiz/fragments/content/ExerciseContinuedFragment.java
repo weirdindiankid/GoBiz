@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.vaibh.gobiz.R;
 
-public class ExerciseContinuedFragment extends ExerciseFragment {
+public class ExerciseContinuedFragment extends ExerciseFragment2 {
 
     @Nullable
     @Override

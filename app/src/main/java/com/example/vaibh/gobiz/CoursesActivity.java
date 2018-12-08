@@ -32,6 +32,7 @@ public class CoursesActivity extends AppCompatActivity {
     public HashMap<Course, List<Module>> courseModuleMap = new HashMap<>();
 
     public static final String MODULES = "MODULES";
+    public static final String COURSE = "COURSE";
     public static final String COURSE_MODULE_MAP = "COURSE_MODULE_MAP";
 
     @Override
@@ -50,7 +51,8 @@ public class CoursesActivity extends AppCompatActivity {
                 if (i == 0) {
                     Intent intent = new Intent(getApplicationContext(), LessonsActivity.class);
                     Bundle bundle = new Bundle();
-                    bundle.putParcelableArrayList("MODULES", modules);
+                    bundle.putInt(COURSE, i+1);
+                    bundle.putParcelableArrayList(MODULES, modules);
                     bundle.putSerializable(COURSE_MODULE_MAP, courseModuleMap);
                     intent.putExtras(bundle);
                     startActivity(intent);

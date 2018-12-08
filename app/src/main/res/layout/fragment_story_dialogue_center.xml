@@ -40,23 +40,24 @@
 
         <TextView
             android:id="@+id/dialogue"
-            android:layout_width="240dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:background="@drawable/gray_border"
             android:fontFamily="@font/sign_painter_house_slant"
             android:gravity="center_vertical"
             android:lineSpacingMultiplier="1.2"
+            android:maxWidth="260dp"
             android:paddingLeft="8dp"
             android:paddingTop="10dp"
             android:paddingRight="8dp"
             android:paddingBottom="10dp"
-            android:text="@string/lesson_1_dialogue_3"
             android:textColor="#000"
             android:textSize="@dimen/dialogue_text_size"
             app:layout_constraintBottom_toBottomOf="@+id/dialogue_image"
             app:layout_constraintStart_toStartOf="@+id/dialogue_image"
             app:layout_constraintTop_toBottomOf="@+id/dialogue_image"
+            tools:text="@string/lesson_2_dialogue_5"
             />
 
     </android.support.constraint.ConstraintLayout>

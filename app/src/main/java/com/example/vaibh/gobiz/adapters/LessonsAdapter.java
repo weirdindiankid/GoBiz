@@ -1,6 +1,7 @@
 package com.example.vaibh.gobiz.adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.example.vaibh.gobiz.R;
 import com.example.vaibh.gobiz.pojos.Module;
 import com.example.vaibh.gobiz.pojos.ModuleMapLock;
 import com.github.lzyzsd.circleprogress.DonutProgress;
+import com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor;
 
 import java.util.ArrayList;
 
@@ -26,7 +28,8 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Module module = getItem(position);
-        Log.d("Module Value Lesson", ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString());
+
+        Log.d("Module Value Lesson",Boolean.toString(ModuleMapLock.moduleMap.containsKey(module.getModuleNumber())));
         if (ModuleMapLock.moduleMap.get(module.getModuleNumber()).toString().equals("false")) {
             enabledModule = false;
         }
@@ -44,8 +47,10 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
 
         // todo: add description field to module class
         lessonDescription.setText(getContext().getString(R.string.lesson_description_placeholder));
+        lessonTitle.setTypeface(null, Typeface.BOLD);
 
-        boolean isUnlocked = enabledModule;
+        // position <= 1 for hard locking unimplemented content
+        boolean isUnlocked = enabledModule && position <= 1;
         if (!isUnlocked) {
             donutProgress.setProgress(0f);
             donutProgress.setText("");

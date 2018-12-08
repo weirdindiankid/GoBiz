@@ -113,6 +113,12 @@ public class Module implements Parcelable {
         Log.d("Title", title);
     }
 
+    // for mocking lessons; delete after connection to db is complete
+    public Module(String moduleNumber, String courseName) {
+        this.courseName = courseName;
+        this.title = courseName;
+        this.moduleNumber = moduleNumber;
+    }
     /**
      * @return quizAnswers
      */

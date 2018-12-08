@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/lesson_fragment_layout_padding"
+        android:paddingTop="@dimen/lesson_fragment_layout_padding"
+        android:paddingRight="@dimen/lesson_fragment_layout_padding"
+        >
+
+        <include
+            layout="@layout/lesson_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:src="@drawable/file_search"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/caption"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center_vertical"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="21sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                tools:text="@string/lesson_2_review_caption"/>
+
+            <TextView
+                android:id="@+id/question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:labelFor="@id/answer_1"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:autoSizeTextType="uniform"
+                tools:ignore="LabelFor"
+                tools:text="@string/lesson_2_review_prompt_1"/>
+
+            <EditText
+                android:id="@+id/answer_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minHeight="60dp"
+                android:padding="4dp"
+                tools:ignore="Autofill"/>
+
+            <TextView
+                android:id="@+id/question_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@id/answer_2"
+                android:maxLines="2"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="16sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                tools:ignore="LabelFor"
+                tools:text="@string/lesson_2_review_prompt_2"/>
+
+            <EditText
+                android:id="@+id/answer_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_border"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minHeight="60dp"
+                android:padding="4dp"
+                tools:ignore="Autofill"/>
+
+            <TextView
+                android:id="@+id/end_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingMultiplier="1.1"
+                android:textColor="#000"
+                android:textSize="14sp"
+                tools:text="@string/lesson_2_review_followup"/>
+
+        </LinearLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/next_button"
+            android:layout_width="@dimen/next_button_dimen"
+            android:layout_height="@dimen/next_button_dimen"
+            android:layout_gravity="end"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+            android:src="@drawable/next"/>
+    </LinearLayout>
+
+
+</ScrollView>

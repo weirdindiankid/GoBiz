@@ -34,23 +34,30 @@
             tools:layout_editor_absoluteY="26dp"/>
 
         <TextView
-            android:id="@+id/textView9"
-            android:layout_width="196dp"
-            android:layout_height="0dp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:layout_marginBottom="22dp"
-            android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/consider_the_following_questions_before_moving_on_slide_to_reveal"
+            android:lineSpacingMultiplier="1.025"
+            android:text="@string/consider_the_following_questions_before_moving_on"
             android:textColor="#000"
+            android:textSize="14sp"
             android:textStyle="italic"
-            app:autoSizeMaxTextSize="14sp"
-            app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="1sp"
-            app:autoSizeTextType="uniform"
             tools:layout_editor_absoluteX="57dp"
             tools:layout_editor_absoluteY="190dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="22dp"
+            android:layout_weight=".33"
+            android:gravity="center_horizontal|top"
+            android:text="@string/slide_to_reveal"
+            android:textColor="#000"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
 
 
         <com.chauthai.swipereveallayout.SwipeRevealLayout

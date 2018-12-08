@@ -12,6 +12,7 @@ import static com.example.vaibh.gobiz.fragments.content.ExerciseBringingItBackFr
 public class AnswersFragment extends HeaderAndSubheaderFragment {
 
     private View root;
+    private String tag = "";
 
     public void refreshAnswers() {
         if (root != null) {
@@ -20,8 +21,8 @@ public class AnswersFragment extends HeaderAndSubheaderFragment {
 
             if (answer1 != null && answer2 != null) {
                 SharedPrefsUtil sp = SharedPrefsUtil.getInstance(getActivity());
-                String t1 = sp.getString(String.valueOf(getLessonNumber()) + ANSWER_1, "");
-                String t2 = sp.getString(String.valueOf(getLessonNumber()) + ANSWER_2, "");
+                String t1 = sp.getString(String.valueOf(getLessonNumber()) + tag + ANSWER_1, "");
+                String t2 = sp.getString(String.valueOf(getLessonNumber()) + tag + ANSWER_2, "");
                 answer1.setText(t1);
                 answer2.setText(t2);
             }
@@ -37,10 +38,10 @@ public class AnswersFragment extends HeaderAndSubheaderFragment {
                 SharedPrefsUtil sp = SharedPrefsUtil.getInstance(getActivity());
 
                 String t1 = answer1.getText().toString();
-                sp.setString(String.valueOf(getLessonNumber()) + ANSWER_1, t1);
+                sp.setString(String.valueOf(getLessonNumber()) + tag + ANSWER_1, t1);
 
                 String t2 = answer2.getText().toString();
-                sp.setString(String.valueOf(getLessonNumber()) + ANSWER_2, t2);
+                sp.setString(String.valueOf(getLessonNumber()) + tag + ANSWER_2, t2);
             }
         }
     }
@@ -48,4 +49,6 @@ public class AnswersFragment extends HeaderAndSubheaderFragment {
     protected void setRoot(View root) {
         this.root = root;
     }
+
+    public void setTag(String s) { tag = s; }
 }

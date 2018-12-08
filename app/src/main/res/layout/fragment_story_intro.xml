@@ -19,7 +19,7 @@
         />
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/lesson_welcome_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="13.5"
@@ -48,7 +48,7 @@
         android:layout_weight="10"
         android:text="@string/lesson_1_story_intro"
         android:textColor="#000"
-        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMaxTextSize="18sp"
         app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="2sp"
         app:autoSizeTextType="uniform"/>
