@@ -218,4 +218,9 @@ There are a number of traits that commonly are applied to entrepreneurs, particu
     <string name="lesson_1_examples_instructions">Slide to reveal examples of unmet needs &amp; solutions</string>
     <string name="lesson_2_review_caption">Reviewing Your Plan…</string>
 
+    <string name="lesson_3_course_name">Refining Your Idea</string>
+    <string name="lesson_4_course_name">Understanding Your Market</string>
+    <string name="lesson_5_course_name">Starting Your Business Plan</string>
+    <string name="lessons_title">Course %d Lessons</string>
+
 </resources>

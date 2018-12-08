@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vaibh.gobiz.adapters.LessonsAdapter;
@@ -37,10 +38,18 @@ public class LessonsActivity extends AppCompatActivity {
         modules = intent.getParcelableArrayListExtra(MODULES);
         courseModuleMap = (HashMap<Course, List<Module>>) intent.getSerializableExtra(COURSE_MODULE_MAP);
 
+        TextView titleView = findViewById(R.id.title);
+        titleView.setText(String.format(getString(R.string.lessons_title), courseNumber));
+
         LessonsAdapter adapter = new LessonsAdapter(this, modules);
 
         // mocked for testing lesson 2
         modules.add(0, new Module("Mod2", getString(R.string.lesson_2_course_name)));
+
+        // mocked lesosns for demoing
+        modules.add(new Module("Mod2", getString(R.string.lesson_3_course_name)));
+        modules.add(new Module("Mod2", getString(R.string.lesson_4_course_name)));
+        modules.add(new Module("Mod2", getString(R.string.lesson_5_course_name)));
 
         ExpandableHeightListView lessonsList = findViewById(R.id.lessons_list);
         lessonsList.setExpanded(true);

@@ -1,6 +1,7 @@
 package com.example.vaibh.gobiz.adapters;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,8 +45,10 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
 
         // todo: add description field to module class
         lessonDescription.setText(getContext().getString(R.string.lesson_description_placeholder));
+        lessonTitle.setTypeface(null, Typeface.BOLD);
 
-        boolean isUnlocked = enabledModule;
+        // position <= 1 for hard locking unimplemented content
+        boolean isUnlocked = enabledModule && position <= 1;
         if (!isUnlocked) {
             donutProgress.setProgress(0f);
             donutProgress.setText("");

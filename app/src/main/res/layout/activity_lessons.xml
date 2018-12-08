@@ -17,16 +17,39 @@
         android:paddingBottom="12dp"
         >
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="22dp"
-            android:text="@string/label_lessons"
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            />
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="35sp"
+                android:layout_height="35sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/exercise"
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textColor="#000"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="30sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"
+                tools:ignore="RtlSymmetry"
+                tools:text="Course 1 Lessons"/>
+
+
+        </LinearLayout>
 
         <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
             android:id="@+id/lessons_list"
