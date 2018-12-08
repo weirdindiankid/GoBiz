@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/lesson_fragment_layout_padding"
+    tools:context=".fragments.content.LessonSplashIntroFragment">
+
+
+    <TextView
+        android:id="@+id/lesson_number_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1.2"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Lesson 1:"/>
+
+    <TextView
+        android:id="@+id/lesson_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_weight="6"
+        android:gravity="bottom"
+        android:lineSpacingMultiplier="0.88"
+        android:lines="2"
+        android:text="@string/lesson_2_intro_title"
+        android:textColor="#000"
+        android:textStyle="bold"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        />
+
+    <TextView
+        android:id="@+id/lesson_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5.5"
+        android:lineSpacingMultiplier="0.88"
+        android:maxLines="1"
+        android:textStyle="italic"
+        app:autoSizeMaxTextSize="25sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        tools:text="@string/lesson_2_intro_subtitle"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/lesson_welcome_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:src="@drawable/lesson_2_opener"/>
+    </LinearLayout>
+
+
+    <!-- Circle image view weight = 2 / 25.2-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/next_button"
+        android:layout_width="@dimen/next_button_dimen"
+        android:layout_height="@dimen/next_button_dimen"
+        android:layout_gravity="end"
+        android:src="@drawable/next"
+        />
+
+</LinearLayout>

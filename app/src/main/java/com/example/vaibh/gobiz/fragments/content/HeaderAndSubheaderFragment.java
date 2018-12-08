@@ -24,7 +24,7 @@ public class HeaderAndSubheaderFragment extends NextButtonFragment {
     }
 
     protected void setupHeaders(View view) {
-        TextView header = view.findViewById(R.id.header);
+        TextView header = view.findViewById(R.id.lesson_title);
         TextView subheader = view.findViewById(R.id.subheader);
 
         Bundle bundle = this.getArguments();

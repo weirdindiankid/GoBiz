@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:fillViewport="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginTop="@dimen/lesson_fragment_layout_padding"
+        android:layout_marginEnd="@dimen/lesson_fragment_layout_padding"
+        android:orientation="vertical"
+        >
+
+        <include
+            layout="@layout/lesson_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            />
+
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/lesson_fragment_layout_padding"/>
+
+        <TextView
+            android:id="@+id/caption"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textColor="#000"
+            android:textStyle="bold|italic"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            tools:text="Unmet Needs to Solutions"
+            />
+
+        <TextView
+            android:id="@+id/examples_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/example_slide_to_reveal_instruction"
+            android:textColor="#000"
+            android:textStyle="italic"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
+
+        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+            android:id="@+id/examples_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="18dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/next_button"
+            android:layout_width="@dimen/next_button_dimen"
+            android:layout_height="@dimen/next_button_dimen"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/lesson_fragment_layout_padding"
+            android:src="@drawable/next"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/lesson_fragment_layout_padding"/>
+    </LinearLayout>
+
+</ScrollView>

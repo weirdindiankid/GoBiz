@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--TODO: swap lesson_1 names with lesson_2; content was provided in reverse order, hence the naming-->
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="about_gobiz">GoBiz has been developed by the International Labour Organization (ILO), with support of the Boston University Spark! programme as well as students from Liger Academy in Cambodia, as an application to help young people access a simple means of learning more about the opportunities for and steps to starting their own business.  While entrepreneurship and self-employment may not be the path chosen by all users, the knowledge presented here should help anyone in their future employment to understand the basics of business.
+
+        \n \nGoBiz leads users through a series of lessons, making up five course areas, framing for them topics they will want to consider to ensure business success.  As each course is completed, users receive an electronic badge, indicating their having committed to completing the lessons covered.  For those completing all five courses, an electronic certificate of course completion will be issued.</string>
+    <string name="about_gobiz_header">About GoBiz</string>
+    <string name="about_lio">The International Labour Organization (www.ilo.org), celebrating its 100th anniversary in 2019, is the United Nations’ first specialized agency.  The Organization brings together governments, employers and workers of 187 member States  to help create jobs and opportunities for workers of all ages, while setting labour standards, developing policies and devising programmes promoting decent work for all women and men.</string>
+    <string name="about_the_ilo_header">About the ILO</string>
+    <string name="about_us_header">About Us</string>
     <string name="app_name">goBiz</string>
-    <string name="consider_the_following_questions_before_moving_on_slide_to_reveal">Consider the following \nquestions before moving on.\nSlide to reveal:</string>
+    <string name="consider_the_following_questions_before_moving_on">Consider the following \nquestions before moving on.</string>
+    <string name="slide_to_reveal">Slide to reveal:</string>
     <string name="continued">(continued)</string>
     <string name="course_item_title">Course %1$s: %2$s</string>
     <string name="edit_text_hint">|</string>
@@ -10,7 +19,9 @@
     <string name="facebook_app_id">2038429596241610</string>
     <string name="facebook_login_image_button">Facebook Login - Image Button</string>
     <string name="fb_login_protocol_scheme">fb2038429596241610</string>
+    <string name="forgot_password">Forgot password?</string>
     <string name="forgot_your_details">Forgot your details?</string>
+    <string name="gobiz_logo">Gobiz logo</string>
     <string name="goto_dashboard">Goto Dashboard</string>
     <string name="hint_confirm_pass">Confirm Password</string>
     <string name="hint_email">Email</string>
@@ -55,10 +66,15 @@
         \n\u2022\t Thinking that success will come easily, quickly or without lots of work.
         \n\nThe following modules will help on much of this – but the best start will be for you to consider these points and keep improving your plan.</string>
     <string name="lesson_1_dialogue_1">\"I think that it will be complicated and expensive to find all the tools and materials to make jewelry. What do you think, Anwar?\"</string>
+    <string name="lesson_2_dialogue_1">\"I\'ve been looking at job opportunities, wondering if I should get a job at the same company where my brother works.  He said he could probably get me in.\"</string>
     <string name="lesson_1_dialogue_2">\"I think that people need clothes more than jewelry.\"</string>
+    <string name="lesson_2_dialogue_2">\"Me too. My dad wants me to start working at the family shop.  But I don\'t know, I would rather do what I want to do, not just get a job to make money.\"</string>
     <string name="lesson_1_dialogue_3">\"You are right. It is probably better to open a clothing shop.\"</string>
+    <string name="lesson_2_dialogue_3">\"Yes, to be honest, I really don\'t like the idea of working in any company.\"</string>
     <string name="lesson_1_dialogue_4">\"I am experienced in baking, but I don\'t feel skilled enough to open a restaurant.\"</string>
+    <string name="lesson_2_dialogue_4">\"A friend started a business, it failed, so they started another. They said it is hard work, but they don\'t mind, they are their own boss.\"</string>
     <string name="lesson_1_dialogue_5">\"Everyone needs to buy bread every day. Why not open a bakery?\"</string>
+    <string name="lesson_2_dialogue_5">\"And they can do something they love.\"</string>
     <string name="lesson_1_example_solution_1">Italian espresso \nin a/c café</string>
     <string name="lesson_1_example_solution_2">Natural ingredient roadside restaurant/food stand</string>
     <string name="lesson_1_example_solution_3">T-shirts designed by local young artists, silk screened</string>
@@ -73,11 +89,15 @@
     <string name="lesson_1_example_unmet_need_6">Wedding party food</string>
     <string name="lesson_1_examples_caption">Unmet Needs to Solutions</string>
     <string name="lesson_1_exercise_instructions">To find a good business idea, do the following:</string>
+    <string name="lesson_2_exercise_instructions">Consider the pros and cons of being an entrepreneur - write them down on a separate paper as in the table below. If you have a friend or family member you can discuss this with, please do so.</string>
+    <string name="lesson_2_exercise_followup">Now answer for yourself, if you had to put these onto a scale, to see which would weigh more, which would you say weighs more?\n\nEntrepreneurship is hard work, and can be risky. If you don\'t feel the benefits of being an entrepreneur outweigh those costs, you may want to consider carefully your options. Throughout this programme, consider these pros and cons, and others you see – this programme should help you decide on whether to try to start your own business.</string>
     <string name="lesson_1_exercise_part_1">On one side of a piece of paper write 5 or 10 unmet needs you know about – things you wish you had in your everyday life, or that people you know have mentioned – like good quality coffee (or low priced t-shirts, or designer candles…).</string>
     <string name="lesson_1_exercise_part_2">Then, on the other side of the paper, try coming up with solutions to these unmet needs, innovative things that could be done to address them.</string>
     <string name="lesson_1_factoid_1">An estimated 50% of business failure is the result of incompetence.</string>
     <string name="lesson_1_factoid_2">Of the other half, 30% is due to lack of managerial experience, 10% due to lack of general business experience, and the rest the result of fraud, natural disasters and neglect.</string>
     <string name="lesson_1_factoid_3">With careful planning, much of this can be avoided, increasing your chances of success.</string>
+    <string name="lesson_1_intro_title">Creating Business Mission</string>
+    <string name="lesson_2_intro_title">Being an \nEntrepreneur</string>
     <string name="lesson_1_quiz_question_1">Which of the following is a first consideration for success in starting a new business?</string>
     <string name="lesson_1_quiz_question_1_answer_1">A customer need that isn\'t being met</string>
     <string name="lesson_1_quiz_question_1_answer_2">A business plan that considers marketing</string>
@@ -100,13 +120,24 @@
     <string name="lesson_1_review_list_question_6">6. Will the competition allow my business to succeed?</string>
     <string name="lesson_1_review_prompt">Think about these needs and solutions - while answering or considering the following questions…</string>
     <string name="lesson_1_story_intro">Zara and Anwar have both been thinking about starting a new business. Zara is considering three different options: opening a tailoring shop, a clothing shop, or a jewelry shop. Anwar has also identified three different ideas: opening a restaurant, a bakery, or a coffee shop. They discuss their ideas together.</string>
+    <string name="lesson_2_story_intro">Zara and Anwar are two typical young people in Cambodia.  Both have finished school, and are considering their career options.  Meeting in a local café one morning, they talked about their concerns and ideas about the future:</string>
     <string name="lesson_1_story_intro_caption">Story of Zara and Anwar</string>
+    <string name="lesson_2_story_intro_caption">Story of Zara and Anwar</string>
     <string name="lesson_1_story_question_1">What are Zara and Anwar trying to decide?</string>
+    <string name="lesson_2_story_question_1">What choice faces Zara and Anwar?</string>
     <string name="lesson_1_story_question_2">What factors are they considering when deciding on a business idea?</string>
+    <string name="lesson_2_story_question_2">Why might they want to start their own business?</string>
     <string name="lesson_1_story_question_3">What business idea do you think Zara and Anwar should each choose?</string>
+    <string name="lesson_2_story_question_3">What challenges do they have to consider, if they want to start their own business?</string>
     <string name="lesson_1_success_story">In 2007 Ritthy Paiborn was working in his father’s restaurant, doing everything from waiting on tables to washing dishes to cooking food. Like his father did as well. But whenever foreigners came in, they asked if they had coffee – and when he served the usual powdered type Nescafe, they complained. \n\nRitthy realized there was an unmet customer demand – people wanted good, Italian style espresso coffee. And they were willing to pay for it. With a bit of savings and a loan from his father, he bought an Italian coffee machine, put it outside their restaurant, and created Ritthy’s Café with sidewalk seating for five. The business flourished, selling coffee to both the restaurant customers – which helped grow his father’s business – and to people outside. \n\nToday, seven years later, Ritthy runs 10 Ritthy’s Cafes around Phnom Penh and Siem Reap, and is one of Cambodia’s best known entrepreneurs – all because he saw a customer need and found a way to meet it.</string>
+    <string name="lesson_2_success_story">John Paul DeJoria co-founded both Paul Mitchell hair products and Patrón tequila, becoming a billionaire along the way. The path to success wasn\'t always easy for him, though. DeJoria spent time on the streets twice. The first time he was homeless, he was only 22 and had a two-year-old son to care for. He persisted in his entrepreneurial vision, though, eventually co-founding John Paul Mitchell Systems with $700 in startup cash. Today, DeJoria is a philanthropist who supports a number of social causes. Among other things, he helps to provide resources to people dealing with homelessness.</string>
+    <string name="lesson_2_success_story_source">https://www.inc.com/adam-heitzman/8-wacky-entrepreneur-stories-to-inspire-your-own-business-success.html</string>
     <string name="lesson_1_theory_model">Most successful new businesses address two related issues – one is an unmet customer need; the second is a new idea for meeting this need, either a new business approach or a new technology. For your business idea to work, you should try to consider both items. \n\nTake for example good quality coffee shops. Previously in many countries, coffee was not a luxury item, it was sold in restaurants or on street corners by vendors at low price. But as people have gotten wealthier, demand for quality coffee, a small luxury, has grown; meanwhile, some entrepreneurs spotted this new unmet need and came up with a new business model, providing quality coffee in comfortable environments – and successful cafes have sprouted up all over. \n\nTo come up with a business idea, try to think of: \n- What people need or want but don’t have. \n- Resources that you have access to and could use. \n- Your own strengths, talents and interests. \n- A problem you have experienced or observed, and for which you think you have a solution. \n\nAlways make sure these two things go together – Unmet customer needs and new, innovative solutions.</string>
+    <string name="lesson_2_theory_model">The Oxford Dictionary defines entrepreneur as \"A person who sets up a business or businesses, taking on financial risks in the hope of profit.\"  This, though, only captures part of what entrepreneurship is about.\n\nEntrepreneurs are risk-takers, people who chose the challenging over the easily chosen.  Typically they are are creators and innovators, people who invent something new.  They typically have to work hard, to be able to achieve the results desired in spite of doing something new.\n\nEntrepreneurs pursue entrepreneurship because they hope for a greater reward – but this is not always financial – the reward could be a hope for independence, or for having the opportunity to do something they love.  In some cases, it is due to necessity – being an entrepreneur is the best option, as other forms of income generation are much less attractive or don’t exist.\n\nIn this module, we will explore the nature of entrepreneurship, the basis of business innovation and startup, and ask you to consider – are you an entrepreneur?  Is this the path for you?\n\nTaking this into account, consider the following traits of an entrepreneur.  Consider which of these you think you have, and which you think you could develop further.  With these in mind, you will consider whether you are ready for entrepreneurship.</string>
     <string name="lesson_1_title">Find your business idea</string>
+    <string name="lesson_description_placeholder">Lesson description to be added. Quisque pretium, tortor ut commodo luctus.</string>
+    <string name="log_in_with_facebook">Log in with Facebook</string>
+    <string name="login">Log in</string>
     <string name="lorem_ipsum_2_lines">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pretium, tortor ut commodo luctus, lacus orci suscipit massa, vitae maximus lorem lacus vel ex.</string>
     <string name="message_failed_quiz">You can do better!</string>
     <string name="passed_quiz_string">Well done!</string>
@@ -117,22 +148,74 @@
     <string name="send_reset_link">Send Reset Link</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_in_with">Sign in with</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_up">Sign Up</string>
     <string name="skip">Skip</string>
     <string name="txt_sign_up">Enter Your Details</string>
-    <string name="lesson_description_placeholder">Lesson description to be added. Quisque pretium, tortor ut commodo luctus.</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="login">Log in</string>
-    <string name="sign_in_with_facebook">Sign in with Facebook</string>
-    <string name="log_in_with_facebook">Log in with Facebook</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="gobiz_logo">Gobiz logo</string>
-    <string name="about_gobiz">GoBiz has been developed by the International Labour Organization (ILO), with support of the Boston University Spark! programme as well as students from Liger Academy in Cambodia, as an application to help young people access a simple means of learning more about the opportunities for and steps to starting their own business.  While entrepreneurship and self-employment may not be the path chosen by all users, the knowledge presented here should help anyone in their future employment to understand the basics of business.
+    <string name="lesson_2_etrep_traits_label">Traits of Entrepreneurs</string>
+    <string name="lesson_2_etrep_trait_01">Creative</string>
+    <string name="lesson_2_etrep_trait_02">Hard working</string>
+    <string name="lesson_2_etrep_trait_03">Self-confident</string>
+    <string name="lesson_2_etrep_trait_04">Passionate</string>
+    <string name="lesson_2_etrep_trait_05">Takes initiative</string>
+    <string name="lesson_2_etrep_trait_06">Can handle uncertainty</string>
+    <string name="lesson_2_etrep_trait_07">Open minded</string>
+    <string name="lesson_2_etrep_trait_08">Risk taking</string>
+    <string name="lesson_2_etrep_trait_09">Has a vision</string>
+    <string name="lesson_2_etrep_trait_10">Persistent</string>
+    <string name="lesson_2_etrep_trait_11">Goal setting</string>
+    <string name="lesson_2_etrep_trait_12">Committed to goals</string>
+    <string name="lesson_2_etrep_trait_13">Listening to others</string>
+    <string name="lesson_2_etrep_trait_14">Focused on future</string>
+    <string name="lesson_2_etrep_trait_15">Financially aware</string>
+    <string name="lesson_2_review_prompt_1">Why do you want to be an entrepreneur?</string>
+    <string name="lesson_2_review_prompt_2">Do you have the traits of an entrepreneur? If not, do you think you can develop them – and how?</string>
+    <string name="lesson_2_review_followup">Think about the answers you provided to each of these.  Does the answer you provided give any clarity to what your vision is for your future?  Sometimes people do things for the wrong reasons – to meet the expectations of friends or family, for example, rather than what is in their heart.  With this programme, you should consider what is right for you – and how to get what is right to work.\n\nIf that is entrepreneurship, then this should help you figure out how best to do something new and innovative for your livelihood.  If it is not, then the programme should help you know your best way forward, working for someone or some organization, adding value and being more entrepreneurial.</string>
+    <string name="lesson_2_factoid_1">It\'s often stated that around 90% of startups fail or eventually close down. While this number may misrepresent the real ratio between business success and failure, the key is figuring out how to increase your business\' chances for success – something we cover in this app.</string>
+    <string name="lesson_2_factoid_2">After 4 years of operation, approximately 50% of new businesses are still open. While most businesses eventually fail, many entrepreneurs try again, with a better understanding of how to succeed.</string>
+    <string name="lesson_2_factoid_3">The key to success is to consider your market, come up with a good product or service, plan carefully to eliminate risks, and make sure you do the best job possible to meet customer demand while managing resources.</string>
+    <string name="lesson_2_conclusion">Entrepreneurship is not for everyone, but it may be for you.
+There are a number of traits that commonly are applied to entrepreneurs, particularly successful entrepreneurs – hard working visionaries, risk takers that are innovative and financially adept, able to pursue a plan with passion and commitment.
 
-        \n \nGoBiz leads users through a series of lessons, making up five course areas, framing for them topics they will want to consider to ensure business success.  As each course is completed, users receive an electronic badge, indicating their having committed to completing the lessons covered.  For those completing all five courses, an electronic certificate of course completion will be issued.</string>
-    <string name="about_lio">The International Labour Organization (www.ilo.org), celebrating its 100th anniversary in 2019, is the United Nations’ first specialized agency.  The Organization brings together governments, employers and workers of 187 member States  to help create jobs and opportunities for workers of all ages, while setting labour standards, developing policies and devising programmes promoting decent work for all women and men.</string>
-    <string name="about_gobiz_header">About GoBiz</string>
-    <string name="about_the_ilo_header">About the ILO</string>
-    <string name="about_us_header">About Us</string>
+\n\nIf that doesn’t sound like you – if one or more of the traits listed don’t apply, that doesn’t mean you wouldn’t make a successful entrepreneur.  In some cases you can develop new skills and abilities. In other cases, you can have others support you, if for example you are not detail oriented, or need to develop increased financial understanding.
 
+\n\nThe key point is having the drive and vision – do you really want to start a business, a business you are passionate about and can commit to pursuing – then the main obstacles to successful entrepreneurship is already overcome.  Drive and desire will take a long ways toward success.
+
+\n\nThe following modules will help you pursue your dreams in a more structured, systematic manner.  And that is the second key to success; drive and desire will get you much of the way there – but having a good plan might take you the rest of the way..
+    </string>
+    <string name="lesson_2_quiz_question_1">Which one below is an advantage of being an entrepreneur?</string>
+    <string name="lesson_2_quiz_question_1_answer_1">Safety</string>
+    <string name="lesson_2_quiz_question_1_answer_2">Independence</string>
+    <string name="lesson_2_quiz_question_1_answer_3">Risk</string>
+
+    <string name="lesson_2_quiz_question_2">Which characteristic below is not an entrepreneurial characteristic?</string>
+    <string name="lesson_2_quiz_question_2_answer_1">Avoiding risks</string>
+    <string name="lesson_2_quiz_question_2_answer_2">Taking informed risks</string>
+    <string name="lesson_2_quiz_question_2_answer_3">Having authority</string>
+
+    <string name="lesson_2_quiz_question_3">Which characteristic is an entrepreneurial characteristic?</string>
+    <string name="lesson_2_quiz_question_3_answer_1">Easily discouraged</string>
+    <string name="lesson_2_quiz_question_3_answer_2">Reliable</string>
+    <string name="lesson_2_quiz_question_3_answer_3">Inflexible</string>
+
+    <string name="lesson_2_quiz_question_4">Which action below is something entrepreneurs typically do?</string>
+    <string name="lesson_2_quiz_question_4_answer_1">Play safe</string>
+    <string name="lesson_2_quiz_question_4_answer_2">Take informed risks</string>
+    <string name="lesson_2_quiz_question_4_answer_3">Give up easily</string>
+
+    <string name="lesson_2_quiz_question_5">Which action below is something entrepreneurs typically do not do?</string>
+    <string name="lesson_2_quiz_question_5_answer_1">Resist change</string>
+    <string name="lesson_2_quiz_question_5_answer_2">Stay optimistic</string>
+    <string name="lesson_2_quiz_question_5_answer_3">Organize tasks</string>
+
+    <string name="entrepreneur">Entrepreneur</string>
+    <string name="label_pros">Pros</string>
+    <string name="label_cons">Cons</string>
+    <string name="label_source">Source:</string>
+    <string name="lesson_2_intro_subtitle">Finding the right path for you</string>
+    <string name="lesson_2_course_name">Being an Entrepreneur</string>
+    <string name="lesson_2_examples_instructions">Slide to reveal examples of entrepreneurial traits</string>
+    <string name="lesson_1_examples_instructions">Slide to reveal examples of unmet needs &amp; solutions</string>
+    <string name="lesson_2_review_caption">Reviewing Your Plan…</string>
 
 </resources>

@@ -16,6 +16,7 @@ public class GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment exten
     private static final String IMAGE = "IMAGE";
     private static final String CAPTION = "CAPTION";
     private static final String BODY = "BODY";
+    private static final String SOURCE = "SOURCE";
 
     @Nullable
     @Override
@@ -30,7 +31,30 @@ public class GenericHeaderImageCaptionScrollableBodyTextNextButtonFragment exten
         setupImage(view);
         setupCaption(view);
         setupBody(view);
+        setupSourceLink(view);
         setupNextButton(view);
+    }
+
+    private void setupSourceLink(View view) {
+        TextView sourceView = view.findViewById(R.id.src_link);
+
+        Bundle bundle = this.getArguments();
+        assert bundle != null;
+
+        if (bundle.containsKey(SOURCE)) {
+            sourceView.setText(bundle.getString(SOURCE));
+        }
+    }
+
+    public void setSourceLink(String string) {
+        Bundle args = getArguments();
+        if (args == null) {
+            args = new Bundle();
+        }
+
+        args.putString(SOURCE, string);
+
+        this.setArguments(args);
     }
 
     public void setImageResource(int imageResource) {
