@@ -17,7 +17,7 @@ import java.util.Map;
 import static java.nio.file.Paths.get;
 
 public final class ModuleMapLock {
-    public static Map<String, Object> moduleMap = new HashMap<>();
+    public static Map<String, Boolean> moduleMap = new HashMap<>();
     public static String userId ;
     private ModuleMapLock(){
 
@@ -38,7 +38,7 @@ public final class ModuleMapLock {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.hasChild("ModulesUnlocked")){
-                    moduleMap = (Map<String, Object>) dataSnapshot.child("ModulesUnlocked").getValue();
+                    moduleMap = (Map<String, Boolean>) dataSnapshot.child("ModulesUnlocked").getValue();
                 }else{
                     ModuleMapLock.signupModule();
                     rootRef.child("ModulesUnlocked").setValue(ModuleMapLock.moduleMap);
