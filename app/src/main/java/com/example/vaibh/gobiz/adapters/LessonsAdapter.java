@@ -57,7 +57,12 @@ public class LessonsAdapter extends ArrayAdapter<Module> {
             convertView.findViewById(R.id.padlock).setVisibility(View.INVISIBLE);
 
             // todo: persist and track content progress rather than setting a constant value every time
-            donutProgress.setProgress(30f);
+            if (position == 0) {
+                donutProgress.setProgress(100f);
+            } else {
+                donutProgress.setProgress(30f);
+            }
+
             donutProgress.setText((int) (donutProgress.getProgress()) + "%");
         }
 
